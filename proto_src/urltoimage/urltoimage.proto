@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package liburltoimage;
+
+option go_package = "mxiqi.com/liburltoimage";
+
+service Urltoimage{
+	// Sends a greeting
+	rpc Convert(Request) returns (Response) {
+	}
+}
+
+message Request{
+	//文件名,可选
+	string url = 1;
+	//要转换成的类型,pdf,png/jpg
+	string size = 2;
+	string type = 3;
+	int32 quality = 4;
+}
+message FileContent{
+	//文件名
+	string name = 1;
+	//二进制的文件内容
+	bytes content= 2;
+}
+message Response{
+	int32 code = 1;
+	string message = 2;
+	repeated FileContent files=3;
+}
+
