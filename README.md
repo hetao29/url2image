@@ -31,7 +31,7 @@ try{
 	$request->setType("jpeg");
 	$request->setQuality(100);
 	echo date("Y-m-d H:i:s")."\n";
-	for($i=0;$i<=100;$i++){
+	
 	list($reply,$error) = $client->convert($request)->wait();
 	if($reply){
 		$files = $reply->getFiles();
@@ -46,7 +46,7 @@ try{
 		echo "Error\n";
 		print_r($error);
 	}
-	}
+	
 	echo date("Y-m-d H:i:s")."\n";
 
 }catch(Exception $e){
