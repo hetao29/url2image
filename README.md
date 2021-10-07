@@ -2,18 +2,6 @@
 
 根据url生成图片的服务
 
-```bash
-#login
-sudo docker login --username=hetal@aliyun.com registry.cn-beijing.aliyuncs.com
-
-#pull image
-sudo docker pull registry.cn-beijing.aliyuncs.com/mxiqi/urltoimage:latest
-
-#test
-sudo docker run -it --rm registry.cn-beijing.aliyuncs.com/mxiqi/urltoimage:latest /bin/bash
-./app.js https://www.yunke.com/ 1024x1024 0 x.png
-```
-
 ## 目录说明
 
 1. proto_src目录，proto 的定义文件目录
@@ -23,14 +11,3 @@ sudo docker run -it --rm registry.cn-beijing.aliyuncs.com/mxiqi/urltoimage:lates
 4. server/client目录，golang 版本的 server 和 client
 
 ## Makefile 说明
-
-### 编译
-```bash
-make build
-```
-
-### 运行
-```bash
-make dockerpull
-make dockerrun
-```
