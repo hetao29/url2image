@@ -71,7 +71,8 @@ const puppeteer = require('puppeteer');
 			if(type!="png"){
 				params.quality= quality;
 			}
-			await page.goto(call.request.url, {waitUntil: 'domcontentloaded'});
+			//await page.goto(call.request.url, {waitUntil: 'domcontentloaded'});
+			await page.goto(call.request.url, {waitUntil: 'networkidle2'});
 			await page.screenshot(params);
 			await page.close();
 			let file = {
