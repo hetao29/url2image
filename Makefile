@@ -5,11 +5,13 @@ build:
 	@export GOPROXY=https://goproxy.cn && cd server && go build -v -ldflags "-X main.version=1.0.0 -X main.build=`date -u +%Y-%m-%d%H:%M:%S`" -o ../bin/server .
 	#@export GOPROXY=https://goproxy.cn && cd client && go build -v -ldflags "-X main.version=1.0.0 -X main.build=`date -u +%Y-%m-%d%H:%M:%S`" -o ../bin/client .
 test:
-	./bin/client
+	php client_php/client.php
+docker-run:
+	sudo docker run -p 8880:80 hetao29/url2image
 docker-image:
-	docker build -t hetao29/urltoimage .
+	docker build -t hetao29/url2image .
 docker-push:
-	docker push hetao29/urltoimage:latest
+	docker push hetao29/url2image:latest
 
 
 ###下面是和 protobuf 协议相关的操作，除非更新 proto，一般情况不需要安装

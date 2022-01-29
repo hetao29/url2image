@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const grpc = require('grpc')
+const grpc = require('@grpc/grpc-js')
 const fs = require('fs')
 const protoLoader = require('@grpc/proto-loader');
 const puppeteer = require('puppeteer');
@@ -7,7 +7,8 @@ const puppeteer = require('puppeteer');
 	global.browser = await puppeteer.launch({
 		args: [
 			'--no-sandbox',
-			'--disable-setuid-sandbox'
+			'--disable-setuid-sandbox',
+			'--device-scale-factor=2'
 		]
 	});
 
@@ -61,7 +62,8 @@ const puppeteer = require('puppeteer');
 			page.setViewport({
 				width,
 				height,
-				isMobile
+				isMobile,
+				deviceScaleFactor: 2
 			})
 			var params={
 				path: `${filename}`,
@@ -109,6 +111,7 @@ const puppeteer = require('puppeteer');
 	server.addService(impl_proto.liburltoimage.Urltoimage.service, {
 		Convert:Convert
 	})
-	server.bind(conf.ip.server + ':' + conf.port, grpc.ServerCredentials.createInsecure())
-	server.start()
+	server.bindAsync(conf.ip.server + ':' + conf.port, grpc.ServerCredentials.createInsecure(), ()=>{
+		server.start()
+	})
 })();

@@ -12,16 +12,16 @@ spl_autoload_register(function($class){
 
 try{
 	//call by grpc
-	$client = new Liburltoimage\UrltoimageClient("127.0.0.1:10020",[
+	$client = new Liburltoimage\UrltoimageClient("127.0.0.1:8880",[
 		'credentials' => Grpc\ChannelCredentials::createInsecure()
 	]);
 	$request = new Liburltoimage\Request();
-	$request->setUrl("https://www.mxiqi.com/auction.info.showlist/384");
-	$request->setSize("1280x800");
-	$request->setType("jpeg");
+	$request->setUrl("https://www.baidu.com/");
+	$request->setSize("380x800");
+	$request->setType("png");
 	$request->setQuality(100);
 	echo date("Y-m-d H:i:s")."\n";
-	for($i=0;$i<=100;$i++){
+	//for($i=0;$i<=100;$i++){
 	list($reply,$error) = $client->convert($request)->wait();
 	if($reply){
 		$files = $reply->getFiles();
@@ -36,7 +36,7 @@ try{
 		echo "Error\n";
 		print_r($error);
 	}
-	}
+	//}
 	echo date("Y-m-d H:i:s")."\n";
 
 }catch(Exception $e){
