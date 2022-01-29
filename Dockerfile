@@ -21,6 +21,7 @@ RUN apk add --no-cache \
 	  font-adobe-100dpi fontconfig \
       nodejs npm \
 	  mkfontscale \
+	  font-noto-emoji \
 	  procps
 RUN apk add wqy-zenhei --update-cache --repository http://nl.alpinelinux.org/alpine/edge/testing/ --allow-untrusted
 
@@ -30,7 +31,6 @@ RUN addgroup -S pptruser && adduser -S -g pptruser pptruser \
     && mkdir -p /home/pptruser/Downloads /app \
     && chown -R pptruser:pptruser /home/pptruser \
     && chown -R pptruser:pptruser /app
-
 
 # Set language to UTF8
 ENV LANG="C.UTF-8"

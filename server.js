@@ -35,7 +35,7 @@ const puppeteer = require('puppeteer');
 			let height = 600;
 			let isMobile = false;
 			if (typeof call.request.size === 'string') {
-				let [width, height] = call.request.size.split('x').map(v => parseInt(v, 10));
+				[width, height] = call.request.size.split('x').map(v => parseInt(v, 10));
 			}
 			//type
 			let type="jpeg";
