@@ -13,12 +13,13 @@ spl_autoload_register(function($class){
 try{
 	//call by grpc
 	$client = new Liburltoimage\UrltoimageClient("127.0.0.1:8880",[
-		'credentials' => Grpc\ChannelCredentials::createInsecure()
+		'credentials' => Grpc\ChannelCredentials::createInsecure(),
+		'grpc.max_receive_message_length' => 8*1024*1024,
 	]);
 	$request = new Liburltoimage\Request();
 	$request->setUrl("https://www.baidu.com/");
-	$request->setSize("380x800");
-	$request->setType("png");
+	$request->setSize("720x800");
+	$request->setType("jpeg");
 	$request->setQuality(100);
 	echo date("Y-m-d H:i:s")."\n";
 	//for($i=0;$i<=100;$i++){
