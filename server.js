@@ -12,8 +12,8 @@ const puppeteer = require('puppeteer');
 		]
 	});
 
-	var PROTO_PATH = './proto_src/urltoimage/urltoimage.proto'
-	var conf = require('./conf')
+	let PROTO_PATH = './proto_src/urltoimage/urltoimage.proto'
+	let conf = require('./conf')
 
 	let packageDefinition = protoLoader.loadSync(
 		PROTO_PATH,{
@@ -29,23 +29,23 @@ const puppeteer = require('puppeteer');
 	console.log(impl_proto);
 	async function Convert(call, callback) {
 		try{
-			var start = (new Date()).getTime();
+			let start = (new Date()).getTime();
 			//width & height
-			var width = 800;
-			var height = 600;
-			var isMobile = false;
+			let width = 800;
+			let height = 600;
+			let isMobile = false;
 			if (typeof call.request.size === 'string') {
-				var [width, height] = call.request.size.split('x').map(v => parseInt(v, 10));
+				let [width, height] = call.request.size.split('x').map(v => parseInt(v, 10));
 			}
 			//type
-			var type="jpeg";
+			let type="jpeg";
 			if (typeof call.request.type === 'string') {
 				if( call.request.type == "png" || call.request.type =="jpeg" || call.request.type=="jpg"){
 					type = call.request.type
 				}
 			}
 			//quality
-			var quality=80;
+			let quality=80;
 			if (typeof call.request.quality === 'number') {
 				quality = call.request.quality
 			} else if (typeof process.argv[6] === 'string') {
@@ -55,17 +55,17 @@ const puppeteer = require('puppeteer');
 				quality = 80;
 			}
 
-			var now = new Date();
-			var dateStr = now.toISOString();
-			var filename = "/tmp/"+now.getTime()+"."+Math.random()+"."+type;
-			const page = await global.browser.newPage();
+			let now = new Date();
+			let dateStr = now.toISOString();
+			let filename = "/tmp/"+now.getTime()+"."+Math.random()+"."+type;
+			let page = await global.browser.newPage();
 			page.setViewport({
 				width,
 				height,
 				isMobile,
 				deviceScaleFactor: 2
 			})
-			var params={
+			let params={
 				path: `${filename}`,
 				type: `${type}`,
 				fullPage: true
@@ -82,7 +82,7 @@ const puppeteer = require('puppeteer');
 				content :fs.readFileSync(filename),
 			};
 			fs.unlinkSync(filename)
-			var end = (new Date()).getTime();
+			let end = (new Date()).getTime();
 			callback(null,{ code: 0, message: "ok", files:[file]});
 			console.log(
 				JSON.stringify({
@@ -107,7 +107,7 @@ const puppeteer = require('puppeteer');
 		}
 	};
 
-	var server = new grpc.Server()
+	let server = new grpc.Server({'grpc.max_send_message_length': 1024*1024*1024})
 	server.addService(impl_proto.liburltoimage.Urltoimage.service, {
 		Convert:Convert
 	})
