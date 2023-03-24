@@ -33,6 +33,12 @@ class Request extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int32 quality = 4;</code>
      */
     private $quality = 0;
+    /**
+     *是否透明
+     *
+     * Generated from protobuf field <code>bool transparent = 5;</code>
+     */
+    private $transparent = false;
 
     /**
      * Constructor.
@@ -46,6 +52,8 @@ class Request extends \Google\Protobuf\Internal\Message
      *          要转换成的类型,pdf,png/jpg
      *     @type string $type
      *     @type int $quality
+     *     @type bool $transparent
+     *          是否透明
      * }
      */
     public function __construct($data = NULL) {
@@ -145,6 +153,32 @@ class Request extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt32($var);
         $this->quality = $var;
+
+        return $this;
+    }
+
+    /**
+     *是否透明
+     *
+     * Generated from protobuf field <code>bool transparent = 5;</code>
+     * @return bool
+     */
+    public function getTransparent()
+    {
+        return $this->transparent;
+    }
+
+    /**
+     *是否透明
+     *
+     * Generated from protobuf field <code>bool transparent = 5;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setTransparent($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->transparent = $var;
 
         return $this;
     }

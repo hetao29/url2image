@@ -77,7 +77,7 @@ const puppeteer = require('puppeteer');
 			await page.goto(call.request.url, {waitUntil: 'networkidle2'});
 
 			//https://stackoverflow.com/questions/55105958/puppeteer-saved-png-is-not-transparent
-			if((conf.screenshot && conf.screenshot.transparent) || process.env.TRANSPARENT){
+			if((conf.screenshot && conf.screenshot.transparent) || process.env.TRANSPARENT || call.request.transparent){
 				await page.evaluate(() => document.body.style.background = 'transparent');
 				params.omitBackground=true;
 			}

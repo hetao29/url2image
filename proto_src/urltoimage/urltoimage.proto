@@ -17,6 +17,8 @@ message Request{
 	string size = 2;
 	string type = 3;
 	int32 quality = 4;
+	//是否透明
+	bool transparent = 5;
 }
 message FileContent{
 	//文件名
