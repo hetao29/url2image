@@ -39,6 +39,10 @@ class Request extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool transparent = 5;</code>
      */
     private $transparent = false;
+    /**
+     * Generated from protobuf field <code>.liburltoimage.PDFOptions pdfoptions = 6;</code>
+     */
+    private $pdfoptions = null;
 
     /**
      * Constructor.
@@ -54,6 +58,7 @@ class Request extends \Google\Protobuf\Internal\Message
      *     @type int $quality
      *     @type bool $transparent
      *          是否透明
+     *     @type \Liburltoimage\PDFOptions $pdfoptions
      * }
      */
     public function __construct($data = NULL) {
@@ -179,6 +184,28 @@ class Request extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->transparent = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.liburltoimage.PDFOptions pdfoptions = 6;</code>
+     * @return \Liburltoimage\PDFOptions
+     */
+    public function getPdfoptions()
+    {
+        return $this->pdfoptions;
+    }
+
+    /**
+     * Generated from protobuf field <code>.liburltoimage.PDFOptions pdfoptions = 6;</code>
+     * @param \Liburltoimage\PDFOptions $var
+     * @return $this
+     */
+    public function setPdfoptions($var)
+    {
+        GPBUtil::checkMessage($var, \Liburltoimage\PDFOptions::class);
+        $this->pdfoptions = $var;
 
         return $this;
     }
