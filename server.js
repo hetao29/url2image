@@ -75,6 +75,14 @@ const puppeteer = require('puppeteer');
 			}
 			//await page.goto(call.request.url, {waitUntil: 'domcontentloaded'});
 			await page.goto(call.request.url, {waitUntil: 'networkidle2'});
+
+			//https://stackoverflow.com/questions/55105958/puppeteer-saved-png-is-not-transparent
+			if((conf.screenshot && conf.screenshot.transparent) || process.env.TRANSPARENT){
+				await page.evaluate(() => document.body.style.background = 'transparent');
+				params.omitBackground=true;
+			}
+
+
 			await page.screenshot(params);
 			await page.close();
 			let file = {
@@ -93,7 +101,8 @@ const puppeteer = require('puppeteer');
 					quality:quality,
 					filename,
 					width,
-					height
+					height,
+					params
 				})
 			);
 		}catch(e){
