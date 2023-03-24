@@ -1,11 +1,7 @@
 all:
 	@echo "Please specify the cmd!";
-build:
-	@#正常编译
-	@export GOPROXY=https://goproxy.cn && cd server && go build -v -ldflags "-X main.version=1.0.0 -X main.build=`date -u +%Y-%m-%d%H:%M:%S`" -o ../bin/server .
-	#@export GOPROXY=https://goproxy.cn && cd client && go build -v -ldflags "-X main.version=1.0.0 -X main.build=`date -u +%Y-%m-%d%H:%M:%S`" -o ../bin/client .
-test:
-	php client_php/client.php
+test_php:
+	php client/client_php/client.php
 docker-run:
 	sudo docker run -p 8880:80 hetao29/url2image
 docker-image:
@@ -67,11 +63,3 @@ genphpproto:
 		--proto_path=proto_src \
 		--plugin=protoc-gen-grpc=/usr/bin/grpc_php_plugin \
 		"{}"
-
-lint:
-	#可选!!!
-	export GOPROXY=https://goproxy.cn && go get -u golang.org/x/lint/golint
-	find . -name "*go" | xargs -I {} golint "{}"
-fmt:
-	#可选!!!
-	find . -name "*go" | xargs -I {} go fmt "{}"
