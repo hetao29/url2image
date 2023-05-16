@@ -10,6 +10,7 @@ service Urltoimage{
 	}
 }
 
+//https://pptr.dev/api/puppeteer.page.screenshot
 message Request{
 	//文件名,可选
 	string url = 1;
@@ -20,6 +21,7 @@ message Request{
 	//是否透明
 	bool transparent = 5;
 	PDFOptions pdfoptions = 6;
+	bool captureBeyondViewport = 7;
 }
 //https://pptr.dev/api/puppeteer.pdfoptions
 message PDFOptions{

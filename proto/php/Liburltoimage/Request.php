@@ -9,6 +9,8 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ *https://pptr.dev/api/puppeteer.page.screenshot
+ *
  * Generated from protobuf message <code>liburltoimage.Request</code>
  */
 class Request extends \Google\Protobuf\Internal\Message
@@ -43,6 +45,10 @@ class Request extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.liburltoimage.PDFOptions pdfoptions = 6;</code>
      */
     private $pdfoptions = null;
+    /**
+     * Generated from protobuf field <code>bool captureBeyondViewport = 7;</code>
+     */
+    private $captureBeyondViewport = false;
 
     /**
      * Constructor.
@@ -59,6 +65,7 @@ class Request extends \Google\Protobuf\Internal\Message
      *     @type bool $transparent
      *          是否透明
      *     @type \Liburltoimage\PDFOptions $pdfoptions
+     *     @type bool $captureBeyondViewport
      * }
      */
     public function __construct($data = NULL) {
@@ -206,6 +213,28 @@ class Request extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Liburltoimage\PDFOptions::class);
         $this->pdfoptions = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool captureBeyondViewport = 7;</code>
+     * @return bool
+     */
+    public function getCaptureBeyondViewport()
+    {
+        return $this->captureBeyondViewport;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool captureBeyondViewport = 7;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setCaptureBeyondViewport($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->captureBeyondViewport = $var;
 
         return $this;
     }

@@ -37,6 +37,7 @@ const puppeteer = require('puppeteer');
 			if (call.request.size) {
 				[width, height] = call.request.size.split('x').map(v => parseInt(v, 10));
 			}
+			let captureBeyondViewport = call.request.captureBeyondViewport;
 			//type
 			let type="jpeg";
 			if (call.request.type) {
@@ -60,7 +61,8 @@ const puppeteer = require('puppeteer');
 			let params={
 				path: `${filename}`,
 				type: `${type}`,
-				fullPage: true
+				fullPage: true,
+				captureBeyondViewport: captureBeyondViewport,
 			};
 
 			if(type=="pdf"){
