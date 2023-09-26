@@ -2,6 +2,8 @@
 
 根据url生成图片、pdf的服务，服务端可以用docker进行运行，然后通过grpc服务进行调用，生成图片
 
+具体协议参考 https://github.com/hetao29/url2image/blob/main/proto_src/urltoimage/urltoimage.proto
+
 ## 目录说明
 
 1. proto_src目录，proto 的定义文件目录
