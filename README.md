@@ -12,6 +12,32 @@
 3. proto目录，是自动生成的 proto 的目录，不需要手动修改
 4. server/client目录，golang 版本的 server 和 client
 
+## 部署(docker-compose.yml)
+
+```yaml
+version: "3.7"
+services:
+  core:
+    image: hetao29/url2image:latest
+    ports:
+        - "10020:80"
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 1
+        delay: 10s
+        order: start-first
+        failure_action: rollback
+      rollback_config:
+        parallelism: 1
+        delay: 10s
+        order: start-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+
+```
+
 ## PHP调用示例（其它语言一样）
 
 ```php
