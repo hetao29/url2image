@@ -1,0 +1,26 @@
+{
+    "name": "hetao29/url2image",
+    "description": "Url to Image/Pdf",
+    "keywords": ["php", "url", "web","image","pdf","png","jpg","jepg"],
+    "homepage": "https://github.com/hetao29/url2image",
+    "type": "library",
+    "license": "MIT",
+	"require": {
+		"google/protobuf": "^v3.24.0",
+		"grpc/grpc": "^1.57.0",
+		"google/common-protos": "^v4.3.0"
+	},
+    "authors": [
+        {
+            "name": "hetao",
+            "email": "hetao@hetao.name",
+            "homepage": "https://github.com/hetao29"
+        }
+    ],
+	"autoload":{
+		"files":["libs/Liburltoimage/UrltoimageClient.php"],
+		"psr-4":{
+			"":["libs/"]
+		}
+	}
+}

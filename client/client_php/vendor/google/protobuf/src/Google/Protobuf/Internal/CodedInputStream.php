@@ -113,7 +113,7 @@ class CodedInputStream
     /**
      * Read uint32 into $var. Advance buffer with consumed bytes. If the
      * contained varint is larger than 32 bits, discard the high order bits.
-     * @param $var.
+     * @param $var
      */
     public function readVarint32(&$var)
     {
@@ -142,7 +142,7 @@ class CodedInputStream
 
     /**
      * Read Uint64 into $var. Advance buffer with consumed bytes.
-     * @param $var.
+     * @param $var
      */
     public function readVarint64(&$var)
     {
@@ -208,7 +208,7 @@ class CodedInputStream
     /**
      * Read int into $var. If the result is larger than the largest integer, $var
      * will be -1. Advance buffer with consumed bytes.
-     * @param $var.
+     * @param $var
      */
     public function readVarintSizeAsInt(&$var)
     {
@@ -220,9 +220,9 @@ class CodedInputStream
     }
 
     /**
-     * Read 32-bit unsiged integer to $var. If the buffer has less than 4 bytes,
+     * Read 32-bit unsigned integer to $var. If the buffer has less than 4 bytes,
      * return false. Advance buffer with consumed bytes.
-     * @param $var.
+     * @param $var
      */
     public function readLittleEndian32(&$var)
     {
@@ -236,9 +236,9 @@ class CodedInputStream
     }
 
     /**
-     * Read 64-bit unsiged integer to $var. If the buffer has less than 8 bytes,
+     * Read 64-bit unsigned integer to $var. If the buffer has less than 8 bytes,
      * return false. Advance buffer with consumed bytes.
-     * @param $var.
+     * @param $var
      */
     public function readLittleEndian64(&$var)
     {
@@ -261,7 +261,6 @@ class CodedInputStream
 
     /**
      * Read tag into $var. Advance buffer with consumed bytes.
-     * @param $var.
      */
     public function readTag()
     {
@@ -283,7 +282,7 @@ class CodedInputStream
         }
 
         $result = 0;
-        // The larget tag is 2^29 - 1, which can be represented by int32.
+        // The largest tag is 2^29 - 1, which can be represented by int32.
         $success = $this->readVarint32($result);
         if ($success) {
             return $result;

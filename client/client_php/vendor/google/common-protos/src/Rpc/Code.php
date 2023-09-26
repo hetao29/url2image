@@ -7,7 +7,7 @@ namespace Google\Rpc;
 use UnexpectedValueException;
 
 /**
- * The canonical error codes for Google APIs.
+ * The canonical error codes for gRPC APIs.
  * Sometimes multiple error codes may apply.  Services should return
  * the most specific error code that applies.  For example, prefer
  * `OUT_OF_RANGE` over `FAILED_PRECONDITION` if both codes apply.
@@ -18,7 +18,7 @@ use UnexpectedValueException;
 class Code
 {
     /**
-     * Not an error; returned on success
+     * Not an error; returned on success.
      * HTTP Mapping: 200 OK
      *
      * Generated from protobuf enum <code>OK = 0;</code>
@@ -66,7 +66,7 @@ class Code
     /**
      * Some requested entity (e.g., file or directory) was not found.
      * Note to server developers: if a request is denied for an entire class
-     * of users, such as gradual feature rollout or undocumented whitelist,
+     * of users, such as gradual feature rollout or undocumented allowlist,
      * `NOT_FOUND` may be used. If a request is denied for some users within
      * a class of users, such as user-based access control, `PERMISSION_DENIED`
      * must be used.
@@ -121,11 +121,11 @@ class Code
      * Service implementors can use the following guidelines to decide
      * between `FAILED_PRECONDITION`, `ABORTED`, and `UNAVAILABLE`:
      *  (a) Use `UNAVAILABLE` if the client can retry just the failing call.
-     *  (b) Use `ABORTED` if the client should retry at a higher level
-     *      (e.g., when a client-specified test-and-set fails, indicating the
-     *      client should restart a read-modify-write sequence).
+     *  (b) Use `ABORTED` if the client should retry at a higher level. For
+     *      example, when a client-specified test-and-set fails, indicating the
+     *      client should restart a read-modify-write sequence.
      *  (c) Use `FAILED_PRECONDITION` if the client should not retry until
-     *      the system state has been explicitly fixed.  E.g., if an "rmdir"
+     *      the system state has been explicitly fixed. For example, if an "rmdir"
      *      fails because the directory is non-empty, `FAILED_PRECONDITION`
      *      should be returned since the client should not retry unless
      *      the files are deleted from the directory.
@@ -183,7 +183,8 @@ class Code
     /**
      * The service is currently unavailable.  This is most likely a
      * transient condition, which can be corrected by retrying with
-     * a backoff.
+     * a backoff. Note that it is not always safe to retry
+     * non-idempotent operations.
      * See the guidelines above for deciding between `FAILED_PRECONDITION`,
      * `ABORTED`, and `UNAVAILABLE`.
      * HTTP Mapping: 503 Service Unavailable

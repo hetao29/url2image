@@ -9,47 +9,47 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * An annotation designating that this field is a reference to a resource
- * defined by another message.
+ * Defines a proto annotation that describes a string field that refers to
+ * an API resource.
  *
  * Generated from protobuf message <code>google.api.ResourceReference</code>
  */
 class ResourceReference extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The unified resource type name of the type that this field references.
-     * Marks this as a field referring to a resource in another message.
+     * The resource type that the annotated field references.
      * Example:
-     *   message Subscription {
-     *     string topic = 2 [(google.api.resource_reference) = {
-     *       type = "pubsub.googleapis.com/Topic"
-     *     }];
-     *   }
+     *     message Subscription {
+     *       string topic = 2 [(google.api.resource_reference) = {
+     *         type: "pubsub.googleapis.com/Topic"
+     *       }];
+     *     }
+     * Occasionally, a field may reference an arbitrary resource. In this case,
+     * APIs use the special value * in their resource reference.
+     * Example:
+     *     message GetIamPolicyRequest {
+     *       string resource = 2 [(google.api.resource_reference) = {
+     *         type: "*"
+     *       }];
+     *     }
      *
      * Generated from protobuf field <code>string type = 1;</code>
      */
-    private $type = '';
+    protected $type = '';
     /**
-     * The fully-qualified message name of a child of the type that this field
-     * references.
-     * This is useful for `parent` fields where a resource has more than one
-     * possible type of parent.
+     * The resource type of a child collection that the annotated field
+     * references. This is useful for annotating the `parent` field that
+     * doesn't have a fixed resource type.
      * Example:
-     *   message ListLogEntriesRequest {
-     *     string parent = 1 [(google.api.resource_reference) = {
-     *       child_type: "logging.googleapis.com/LogEntry"
-     *     };
-     *   }
-     * If the referenced message is in the same proto package, the service name
-     * may be omitted:
-     *   message ListLogEntriesRequest {
-     *     string parent = 1
-     *       [(google.api.resource_reference).child_type = "LogEntry"];
-     *   }
+     *     message ListLogEntriesRequest {
+     *       string parent = 1 [(google.api.resource_reference) = {
+     *         child_type: "logging.googleapis.com/LogEntry"
+     *       };
+     *     }
      *
      * Generated from protobuf field <code>string child_type = 2;</code>
      */
-    private $child_type = '';
+    protected $child_type = '';
 
     /**
      * Constructor.
@@ -58,31 +58,31 @@ class ResourceReference extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $type
-     *           The unified resource type name of the type that this field references.
-     *           Marks this as a field referring to a resource in another message.
+     *           The resource type that the annotated field references.
      *           Example:
-     *             message Subscription {
-     *               string topic = 2 [(google.api.resource_reference) = {
-     *                 type = "pubsub.googleapis.com/Topic"
-     *               }];
-     *             }
+     *               message Subscription {
+     *                 string topic = 2 [(google.api.resource_reference) = {
+     *                   type: "pubsub.googleapis.com/Topic"
+     *                 }];
+     *               }
+     *           Occasionally, a field may reference an arbitrary resource. In this case,
+     *           APIs use the special value * in their resource reference.
+     *           Example:
+     *               message GetIamPolicyRequest {
+     *                 string resource = 2 [(google.api.resource_reference) = {
+     *                   type: "*"
+     *                 }];
+     *               }
      *     @type string $child_type
-     *           The fully-qualified message name of a child of the type that this field
-     *           references.
-     *           This is useful for `parent` fields where a resource has more than one
-     *           possible type of parent.
+     *           The resource type of a child collection that the annotated field
+     *           references. This is useful for annotating the `parent` field that
+     *           doesn't have a fixed resource type.
      *           Example:
-     *             message ListLogEntriesRequest {
-     *               string parent = 1 [(google.api.resource_reference) = {
-     *                 child_type: "logging.googleapis.com/LogEntry"
-     *               };
-     *             }
-     *           If the referenced message is in the same proto package, the service name
-     *           may be omitted:
-     *             message ListLogEntriesRequest {
-     *               string parent = 1
-     *                 [(google.api.resource_reference).child_type = "LogEntry"];
-     *             }
+     *               message ListLogEntriesRequest {
+     *                 string parent = 1 [(google.api.resource_reference) = {
+     *                   child_type: "logging.googleapis.com/LogEntry"
+     *                 };
+     *               }
      * }
      */
     public function __construct($data = NULL) {
@@ -91,14 +91,21 @@ class ResourceReference extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The unified resource type name of the type that this field references.
-     * Marks this as a field referring to a resource in another message.
+     * The resource type that the annotated field references.
      * Example:
-     *   message Subscription {
-     *     string topic = 2 [(google.api.resource_reference) = {
-     *       type = "pubsub.googleapis.com/Topic"
-     *     }];
-     *   }
+     *     message Subscription {
+     *       string topic = 2 [(google.api.resource_reference) = {
+     *         type: "pubsub.googleapis.com/Topic"
+     *       }];
+     *     }
+     * Occasionally, a field may reference an arbitrary resource. In this case,
+     * APIs use the special value * in their resource reference.
+     * Example:
+     *     message GetIamPolicyRequest {
+     *       string resource = 2 [(google.api.resource_reference) = {
+     *         type: "*"
+     *       }];
+     *     }
      *
      * Generated from protobuf field <code>string type = 1;</code>
      * @return string
@@ -109,14 +116,21 @@ class ResourceReference extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The unified resource type name of the type that this field references.
-     * Marks this as a field referring to a resource in another message.
+     * The resource type that the annotated field references.
      * Example:
-     *   message Subscription {
-     *     string topic = 2 [(google.api.resource_reference) = {
-     *       type = "pubsub.googleapis.com/Topic"
-     *     }];
-     *   }
+     *     message Subscription {
+     *       string topic = 2 [(google.api.resource_reference) = {
+     *         type: "pubsub.googleapis.com/Topic"
+     *       }];
+     *     }
+     * Occasionally, a field may reference an arbitrary resource. In this case,
+     * APIs use the special value * in their resource reference.
+     * Example:
+     *     message GetIamPolicyRequest {
+     *       string resource = 2 [(google.api.resource_reference) = {
+     *         type: "*"
+     *       }];
+     *     }
      *
      * Generated from protobuf field <code>string type = 1;</code>
      * @param string $var
@@ -131,22 +145,15 @@ class ResourceReference extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The fully-qualified message name of a child of the type that this field
-     * references.
-     * This is useful for `parent` fields where a resource has more than one
-     * possible type of parent.
+     * The resource type of a child collection that the annotated field
+     * references. This is useful for annotating the `parent` field that
+     * doesn't have a fixed resource type.
      * Example:
-     *   message ListLogEntriesRequest {
-     *     string parent = 1 [(google.api.resource_reference) = {
-     *       child_type: "logging.googleapis.com/LogEntry"
-     *     };
-     *   }
-     * If the referenced message is in the same proto package, the service name
-     * may be omitted:
-     *   message ListLogEntriesRequest {
-     *     string parent = 1
-     *       [(google.api.resource_reference).child_type = "LogEntry"];
-     *   }
+     *     message ListLogEntriesRequest {
+     *       string parent = 1 [(google.api.resource_reference) = {
+     *         child_type: "logging.googleapis.com/LogEntry"
+     *       };
+     *     }
      *
      * Generated from protobuf field <code>string child_type = 2;</code>
      * @return string
@@ -157,22 +164,15 @@ class ResourceReference extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The fully-qualified message name of a child of the type that this field
-     * references.
-     * This is useful for `parent` fields where a resource has more than one
-     * possible type of parent.
+     * The resource type of a child collection that the annotated field
+     * references. This is useful for annotating the `parent` field that
+     * doesn't have a fixed resource type.
      * Example:
-     *   message ListLogEntriesRequest {
-     *     string parent = 1 [(google.api.resource_reference) = {
-     *       child_type: "logging.googleapis.com/LogEntry"
-     *     };
-     *   }
-     * If the referenced message is in the same proto package, the service name
-     * may be omitted:
-     *   message ListLogEntriesRequest {
-     *     string parent = 1
-     *       [(google.api.resource_reference).child_type = "LogEntry"];
-     *   }
+     *     message ListLogEntriesRequest {
+     *       string parent = 1 [(google.api.resource_reference) = {
+     *         child_type: "logging.googleapis.com/LogEntry"
+     *       };
+     *     }
      *
      * Generated from protobuf field <code>string child_type = 2;</code>
      * @param string $var

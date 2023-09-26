@@ -1,13 +1,14 @@
 {
 	"require":{
-		"google/protobuf": "^v3.5.0",
-		"grpc/grpc": "v1.12.0",
-		"google/common-protos": "^1.0"
+		"google/protobuf": "^v3.24.0",
+		"grpc/grpc": "^1.57.0",
+		"google/common-protos": "^v4.3.0",
+		"hetao29/url2image": "^1.0.0"
 	},
 	"repositories": {
 		"packagist": {
 			"type": "composer",
-				"url": "https://packagist.phpcomposer.com"
+			"url": "https://mirrors.aliyun.com/composer/"
 		}
 	}
 }

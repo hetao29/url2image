@@ -7,8 +7,7 @@
 ## 目录说明
 
 1. proto_src目录，proto 的定义文件目录
-2. client 目录，golang语言的客户端示例代码
-2. client_xxx目录，是各种语言的客户端示例代码
+2. client/client_xxx 目录，各语言的客户端示例代码(golang,js,php,java)
 3. proto目录，是自动生成的 proto 的目录，不需要手动修改
 4. server/client目录，golang 版本的 server 和 client
 
@@ -40,13 +39,18 @@ services:
 
 ## PHP调用示例（其它语言一样）
 
+1. 安装libs库
+
+```bash
+composer require hetao29/url2image
+```
+
+2. 可以参考 client/client_php 下的代码
+
+3. 源代码参考
 ```php
 <?php
-define("ROOT",dirname(__FILE__)."/");
-define("ROOT_PROTO_LIB",ROOT."../proto/php/");
-
-require_once(ROOT."vendor/autoload.php");
-
+require_once("vendor/autoload.php");
 
 try{
 	//call by grpc

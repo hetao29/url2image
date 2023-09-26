@@ -35,7 +35,7 @@ class Explicit extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type float[]|\Google\Protobuf\Internal\RepeatedField $bounds
+     *     @type array<float>|\Google\Protobuf\Internal\RepeatedField $bounds
      *           The values must be monotonically increasing.
      * }
      */
@@ -59,7 +59,7 @@ class Explicit extends \Google\Protobuf\Internal\Message
      * The values must be monotonically increasing.
      *
      * Generated from protobuf field <code>repeated double bounds = 1;</code>
-     * @param float[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<float>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setBounds($var)
@@ -72,6 +72,4 @@ class Explicit extends \Google\Protobuf\Internal\Message
 
 }
 
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Explicit::class, \Google\Api\Distribution_BucketOptions_Explicit::class);
 

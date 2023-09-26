@@ -1,0 +1,62 @@
+syntax = "proto3";
+
+package liburltoimage;
+
+option go_package = "mxiqi.com/liburltoimage";
+
+service Urltoimage{
+	// Sends a greeting
+	rpc Convert(Request) returns (Response) {
+	}
+}
+
+//https://pptr.dev/api/puppeteer.page.screenshot
+message Request{
+	//文件名,可选
+	string url = 1;
+	//要转换成的类型,pdf,png/jpg
+	string size = 2;
+	string type = 3;
+	int32 quality = 4;
+	//是否透明
+	bool transparent = 5;
+	PDFOptions pdfoptions = 6;
+	bool captureBeyondViewport = 7;
+}
+//https://pptr.dev/api/puppeteer.pdfoptions
+message PDFOptions{
+	//格式A3,A4,A5,Letter,default A4
+	string format = 1;
+	bool displayHeaderFooter = 2;
+	string footerTemplate = 3;
+	string headerTemplate = 4;
+	string height = 5;
+	string width = 6;
+	//是否横向（默认是竖）
+	bool landscape = 7;
+	//是否透明
+	bool omitBackground = 8;
+	string pageRanges = 9;
+	//边距
+	PDFMargin margin = 10;
+	bool printBackground = 11;
+	bool preferCSSPageSize = 12;
+}
+message PDFMargin{
+	string bottom=1;
+	string left=2;
+	string right=3;
+	string top=4;
+}
+message FileContent{
+	//文件名
+	string name = 1;
+	//二进制的文件内容
+	bytes content= 2;
+}
+message Response{
+	int32 code = 1;
+	string message = 2;
+	repeated FileContent files=3;
+}
+

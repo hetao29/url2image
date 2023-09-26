@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
  * calling project hasn't enabled the service in the developer console, then
  * a service could respond with the project id and set `service_disabled`
  * to true.
- * Also see RetryDetail and Help types for other details about handling a
+ * Also see RetryInfo and Help types for other details about handling a
  * quota failure.
  *
  * Generated from protobuf message <code>google.rpc.QuotaFailure</code>
@@ -36,7 +36,7 @@ class QuotaFailure extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Google\Rpc\QuotaFailure\Violation[]|\Google\Protobuf\Internal\RepeatedField $violations
+     *     @type array<\Google\Rpc\QuotaFailure\Violation>|\Google\Protobuf\Internal\RepeatedField $violations
      *           Describes all quota violations.
      * }
      */
@@ -60,7 +60,7 @@ class QuotaFailure extends \Google\Protobuf\Internal\Message
      * Describes all quota violations.
      *
      * Generated from protobuf field <code>repeated .google.rpc.QuotaFailure.Violation violations = 1;</code>
-     * @param \Google\Rpc\QuotaFailure\Violation[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Google\Rpc\QuotaFailure\Violation>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setViolations($var)

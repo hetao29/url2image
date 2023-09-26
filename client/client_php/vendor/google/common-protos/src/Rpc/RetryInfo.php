@@ -18,7 +18,7 @@ use Google\Protobuf\Internal\GPBUtil;
  * receiving the error response before retrying.  If retrying requests also
  * fail, clients should use an exponential backoff scheme to gradually increase
  * the delay between retries based on `retry_delay`, until either a maximum
- * number of retires have been reached or a maximum retry delay cap has been
+ * number of retries have been reached or a maximum retry delay cap has been
  * reached.
  *
  * Generated from protobuf message <code>google.rpc.RetryInfo</code>
@@ -30,7 +30,7 @@ class RetryInfo extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.google.protobuf.Duration retry_delay = 1;</code>
      */
-    private $retry_delay = null;
+    protected $retry_delay = null;
 
     /**
      * Constructor.
@@ -51,11 +51,21 @@ class RetryInfo extends \Google\Protobuf\Internal\Message
      * Clients should wait at least this long between retrying the same request.
      *
      * Generated from protobuf field <code>.google.protobuf.Duration retry_delay = 1;</code>
-     * @return \Google\Protobuf\Duration
+     * @return \Google\Protobuf\Duration|null
      */
     public function getRetryDelay()
     {
         return $this->retry_delay;
+    }
+
+    public function hasRetryDelay()
+    {
+        return isset($this->retry_delay);
+    }
+
+    public function clearRetryDelay()
+    {
+        unset($this->retry_delay);
     }
 
     /**
