@@ -67,15 +67,9 @@ const puppeteer = require('puppeteer');
 
 			if(type=="pdf"){
 				//https://pptr.dev/api/puppeteer.page.pdf
+				//https://pptr.dev/api/puppeteer.pdfoptions
 				let pdfOptions = {
-					format:"A4"
 				};
-
-				if(call.request.pdfoptions.format){
-					pdfoptions.format = call.request.pdfoptions.format;
-				}else{
-					pdfOptions.format="A4";
-				}
 
 				for(var k in call.request.pdfoptions){
 					if(call.request.pdfoptions[k]){
@@ -94,6 +88,12 @@ const puppeteer = require('puppeteer');
 						pdfOptions
 					})
 				);
+				page.setViewport({
+					width,
+					height,
+					isMobile,
+					deviceScaleFactor: 2
+				})
 
 				await page.goto(call.request.url, {waitUntil: 'networkidle2'});
 				await page.pdf(pdfOptions);
