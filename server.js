@@ -65,6 +65,12 @@ const puppeteer = require('puppeteer');
 				captureBeyondViewport: captureBeyondViewport,
 			};
 
+			page.setViewport({
+				width,
+				height,
+				isMobile,
+				deviceScaleFactor: 2
+			})
 			if(type=="pdf"){
 				//https://pptr.dev/api/puppeteer.page.pdf
 				//https://pptr.dev/api/puppeteer.pdfoptions
@@ -82,18 +88,12 @@ const puppeteer = require('puppeteer');
 				console.log(
 					"onRequest",
 					JSON.stringify({
-						date: dateStr,
 						type,
+						date: dateStr,
 						request:call.request,
 						pdfOptions
 					})
 				);
-				page.setViewport({
-					width,
-					height,
-					isMobile,
-					deviceScaleFactor: 2
-				})
 
 				await page.goto(call.request.url, {waitUntil: 'networkidle2'});
 				await page.pdf(pdfOptions);
@@ -102,17 +102,11 @@ const puppeteer = require('puppeteer');
 				if(type!="png"){
 					params.quality= quality;
 				}
-				page.setViewport({
-					width,
-					height,
-					isMobile,
-					deviceScaleFactor: 2
-				})
 				console.log(
 					"onRequest",
 					JSON.stringify({
-						date: dateStr,
 						type,
+						date: dateStr,
 						request:call.request,
 					})
 				);
