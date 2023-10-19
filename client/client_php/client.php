@@ -30,6 +30,9 @@ try{
 	$type="pdf";
 	$request->setType($type);
 	$pDFOptions = new Liburltoimage\PDFOptions();
+	//$pDFOptions->setFormat("A4");
+	$pDFOptions->setWidth("1000px");
+	$pDFOptions->setHeight("500px");
 	$pDFOptions->setDisplayHeaderFooter(true);
 	$pDFOptions->setHeaderTemplate('<div style="width:100%;text-align:center;font-size:14px"><span class="title"></span></div>');
 	$footer ='<div style="display:block;width:100%;text-align:center;font-size:14px"><span class="pageNumber"></span> / <span class="totalPages"></span></div>';
