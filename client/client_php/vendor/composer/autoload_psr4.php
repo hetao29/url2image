@@ -20,5 +20,4 @@ return array(
     'GPBMetadata\\Google\\Iam\\' => array($vendorDir . '/google/common-protos/metadata/Iam'),
     'GPBMetadata\\Google\\Cloud\\' => array($vendorDir . '/google/common-protos/metadata/Cloud'),
     'GPBMetadata\\Google\\Api\\' => array($vendorDir . '/google/common-protos/metadata/Api'),
-    '' => array($vendorDir . '/hetao29/url2image/libs'),
 );

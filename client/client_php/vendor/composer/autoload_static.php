@@ -6,10 +6,6 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit6378e48ff6b072c812c31129a1742e8a
 {
-    public static $files = array (
-        'ec9d228a7acb9f178d540782b685b1c4' => __DIR__ . '/..' . '/hetao29/url2image/libs/Liburltoimage/UrltoimageClient.php',
-    );
-
     public static $prefixLengthsPsr4 = array (
         'G' => 
         array (
@@ -89,10 +85,6 @@ class ComposerStaticInit6378e48ff6b072c812c31129a1742e8a
         ),
     );
 
-    public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/hetao29/url2image/libs',
-    );
-
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
@@ -102,7 +94,6 @@ class ComposerStaticInit6378e48ff6b072c812c31129a1742e8a
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit6378e48ff6b072c812c31129a1742e8a::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit6378e48ff6b072c812c31129a1742e8a::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit6378e48ff6b072c812c31129a1742e8a::$fallbackDirsPsr4;
             $loader->classMap = ComposerStaticInit6378e48ff6b072c812c31129a1742e8a::$classMap;
 
         }, null, ClassLoader::class);

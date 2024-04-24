@@ -1,14 +1,13 @@
 {
 	"require":{
-		"google/protobuf": "^v3.24.0",
-		"grpc/grpc": "^1.57.0",
-		"google/common-protos": "^v4.3.0",
-		"hetao29/url2image": "^1.0.0"
+		"google/protobuf": "^4.0||^3.0",
+		"grpc/grpc": "^1.0",
+		"google/common-protos": "^4.0||^3.0"
 	},
 	"repositories": {
 		"packagist": {
 			"type": "composer",
-			"url": "https://mirrors.aliyun.com/composer/"
+			"url": "https://packagist.org"
 		}
 	}
 }

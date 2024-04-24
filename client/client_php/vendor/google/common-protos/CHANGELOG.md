@@ -1,5 +1,28 @@
 # Changelog
 
+## [4.6.0](https://github.com/googleapis/common-protos-php/compare/v4.5.0...v4.6.0) (2024-04-03)
+
+
+### Features
+
+* Add `api_version` extension to `ServiceOptions`, for collaborative versioning ([#82](https://github.com/googleapis/common-protos-php/issues/82)) ([2ff1de8](https://github.com/googleapis/common-protos-php/commit/2ff1de8c6ffa2b125f502516cbad1315264a9b7b))
+* Add `ErrorReason.LOCATION_POLICY_VIOLATED` enum value ([2ff1de8](https://github.com/googleapis/common-protos-php/commit/2ff1de8c6ffa2b125f502516cbad1315264a9b7b))
+* Add `Publishing.rest_reference_documentation_uri` to aid client library publication ([2ff1de8](https://github.com/googleapis/common-protos-php/commit/2ff1de8c6ffa2b125f502516cbad1315264a9b7b))
+
+## [4.5.0](https://github.com/googleapis/common-protos-php/compare/v4.4.0...v4.5.0) (2023-11-29)
+
+
+### Features
+
+* Add auto_populated_fields to google.api.MethodSettings ([#74](https://github.com/googleapis/common-protos-php/issues/74)) ([d739417](https://github.com/googleapis/common-protos-php/commit/d7394176eb95f0e92af4e93746dba8f515ba9bc2))
+
+## [4.4.0](https://github.com/googleapis/common-protos-php/compare/v4.3.0...v4.4.0) (2023-10-02)
+
+
+### Features
+
+* Public google.api.FieldInfo type and extension ([#71](https://github.com/googleapis/common-protos-php/issues/71)) ([4002074](https://github.com/googleapis/common-protos-php/commit/40020744c65e7561dec08e1cd2994afcc51ec771))
+
 ## [4.3.0](https://github.com/googleapis/common-protos-php/compare/v4.2.0...v4.3.0) (2023-08-22)
 
 

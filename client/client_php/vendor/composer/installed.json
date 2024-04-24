@@ -2,33 +2,27 @@
     "packages": [
         {
             "name": "google/common-protos",
-            "version": "v4.3.0",
-            "version_normalized": "4.3.0.0",
+            "version": "v4.6.0",
+            "version_normalized": "4.6.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/common-protos-php.git",
-                "reference": "4ab56787c4f7c34277055ea7bd9982ad758b2c67"
+                "reference": "f8588298a0a204aef2db15ce501530e476ec883f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/common-protos-php/zipball/4ab56787c4f7c34277055ea7bd9982ad758b2c67",
-                "reference": "4ab56787c4f7c34277055ea7bd9982ad758b2c67",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "url": "https://api.github.com/repos/googleapis/common-protos-php/zipball/f8588298a0a204aef2db15ce501530e476ec883f",
+                "reference": "f8588298a0a204aef2db15ce501530e476ec883f",
+                "shasum": ""
             },
             "require": {
-                "google/protobuf": "^3.6.1",
-                "php": ">=7.4"
+                "google/protobuf": "^v3.25.3||^4.26.1",
+                "php": "^8.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^9.0"
+                "phpunit/phpunit": "^9.6"
             },
-            "time": "2023-08-22T18:10:13+00:00",
+            "time": "2024-04-03T19:11:54+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -57,30 +51,24 @@
             ],
             "support": {
                 "issues": "https://github.com/googleapis/common-protos-php/issues",
-                "source": "https://github.com/googleapis/common-protos-php/tree/v4.3.0"
+                "source": "https://github.com/googleapis/common-protos-php/tree/v4.6.0"
             },
             "install-path": "../google/common-protos"
         },
         {
             "name": "google/protobuf",
-            "version": "v3.24.2",
-            "version_normalized": "3.24.2.0",
+            "version": "v4.26.1",
+            "version_normalized": "4.26.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/protocolbuffers/protobuf-php.git",
-                "reference": "c1043089b14d4b41798b1665b9fbc58ca0f0383d"
+                "reference": "5c46b0eb09e7ad3e6efef3c5a85e2a34108c52ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/c1043089b14d4b41798b1665b9fbc58ca0f0383d",
-                "reference": "c1043089b14d4b41798b1665b9fbc58ca0f0383d",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/5c46b0eb09e7ad3e6efef3c5a85e2a34108c52ae",
+                "reference": "5c46b0eb09e7ad3e6efef3c5a85e2a34108c52ae",
+                "shasum": ""
             },
             "require": {
                 "php": ">=7.0.0"
@@ -91,7 +79,7 @@
             "suggest": {
                 "ext-bcmath": "Need to support JSON deserialization"
             },
-            "time": "2023-08-25T20:17:43+00:00",
+            "time": "2024-03-27T19:56:50+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -110,7 +98,7 @@
                 "proto"
             ],
             "support": {
-                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v3.24.2"
+                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v4.26.1"
             },
             "install-path": "../google/protobuf"
         },
@@ -166,74 +154,6 @@
                 "source": "https://github.com/grpc/grpc-php/tree/v1.57.0"
             },
             "install-path": "../grpc/grpc"
-        },
-        {
-            "name": "hetao29/url2image",
-            "version": "1.0.0",
-            "version_normalized": "1.0.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/hetao29/url2image-php.git",
-                "reference": "669e9f42ee9aed3213aa6658127a0a5c5430cdcb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/hetao29/url2image-php/zipball/669e9f42ee9aed3213aa6658127a0a5c5430cdcb",
-                "reference": "669e9f42ee9aed3213aa6658127a0a5c5430cdcb",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "google/common-protos": "^v4.3.0",
-                "google/protobuf": "^v3.24.0",
-                "grpc/grpc": "^1.57.0"
-            },
-            "time": "2023-09-26T10:12:52+00:00",
-            "type": "library",
-            "installation-source": "dist",
-            "autoload": {
-                "files": [
-                    "libs/Liburltoimage/UrltoimageClient.php"
-                ],
-                "psr-4": {
-                    "": [
-                        "libs/"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "hetao",
-                    "email": "hetao@hetao.name",
-                    "homepage": "https://github.com/hetao29"
-                }
-            ],
-            "description": "Url to Image/Pdf",
-            "homepage": "https://github.com/hetao29/url2image",
-            "keywords": [
-                "image",
-                "jepg",
-                "jpg",
-                "pdf",
-                "php",
-                "png",
-                "url",
-                "web"
-            ],
-            "support": {
-                "issues": "https://github.com/hetao29/url2image-php/issues",
-                "source": "https://github.com/hetao29/url2image-php/tree/1.0.0"
-            },
-            "install-path": "../hetao29/url2image"
         }
     ],
     "dev": true,
