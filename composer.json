@@ -6,9 +6,9 @@
     "type": "library",
     "license": "MIT",
 	"require": {
-		"google/protobuf": "^4.0||^3.0",
-		"grpc/grpc": "^1.0",
-		"google/common-protos": "^4.0||^3.0"
+		"google/protobuf": "*",
+		"grpc/grpc": "*",
+		"google/common-protos": "*"
 	},
     "authors": [
         {
