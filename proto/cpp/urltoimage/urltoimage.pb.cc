@@ -14,248 +14,453 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_urltoimage_2furltoimage_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_FileContent_urltoimage_2furltoimage_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace liburltoimage {
-class RequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Request> _instance;
-} _Request_default_instance_;
-class FileContentDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<FileContent> _instance;
-} _FileContent_default_instance_;
-class ResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Response> _instance;
-} _Response_default_instance_;
+PROTOBUF_CONSTEXPR Request::Request(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.url_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.size_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.type_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.pdfoptions_)*/nullptr
+  , /*decltype(_impl_.quality_)*/0
+  , /*decltype(_impl_.transparent_)*/false
+  , /*decltype(_impl_.capturebeyondviewport_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct RequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR RequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~RequestDefaultTypeInternal() {}
+  union {
+    Request _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RequestDefaultTypeInternal _Request_default_instance_;
+PROTOBUF_CONSTEXPR PDFOptions::PDFOptions(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.format_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.footertemplate_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.headertemplate_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.height_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.width_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.pageranges_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.margin_)*/nullptr
+  , /*decltype(_impl_.displayheaderfooter_)*/false
+  , /*decltype(_impl_.landscape_)*/false
+  , /*decltype(_impl_.omitbackground_)*/false
+  , /*decltype(_impl_.printbackground_)*/false
+  , /*decltype(_impl_.prefercsspagesize_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct PDFOptionsDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR PDFOptionsDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~PDFOptionsDefaultTypeInternal() {}
+  union {
+    PDFOptions _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PDFOptionsDefaultTypeInternal _PDFOptions_default_instance_;
+PROTOBUF_CONSTEXPR PDFMargin::PDFMargin(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.bottom_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.left_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.right_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.top_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct PDFMarginDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR PDFMarginDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~PDFMarginDefaultTypeInternal() {}
+  union {
+    PDFMargin _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PDFMarginDefaultTypeInternal _PDFMargin_default_instance_;
+PROTOBUF_CONSTEXPR FileContent::FileContent(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.content_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct FileContentDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR FileContentDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~FileContentDefaultTypeInternal() {}
+  union {
+    FileContent _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 FileContentDefaultTypeInternal _FileContent_default_instance_;
+PROTOBUF_CONSTEXPR Response::Response(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.files_)*/{}
+  , /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.code_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ResponseDefaultTypeInternal() {}
+  union {
+    Response _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ResponseDefaultTypeInternal _Response_default_instance_;
 }  // namespace liburltoimage
-static void InitDefaultsscc_info_FileContent_urltoimage_2furltoimage_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_urltoimage_2furltoimage_2eproto[5];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_urltoimage_2furltoimage_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_urltoimage_2furltoimage_2eproto = nullptr;
 
-  {
-    void* ptr = &::liburltoimage::_FileContent_default_instance_;
-    new (ptr) ::liburltoimage::FileContent();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::liburltoimage::FileContent::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_FileContent_urltoimage_2furltoimage_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_FileContent_urltoimage_2furltoimage_2eproto}, {}};
-
-static void InitDefaultsscc_info_Request_urltoimage_2furltoimage_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::liburltoimage::_Request_default_instance_;
-    new (ptr) ::liburltoimage::Request();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::liburltoimage::Request::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Request_urltoimage_2furltoimage_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Request_urltoimage_2furltoimage_2eproto}, {}};
-
-static void InitDefaultsscc_info_Response_urltoimage_2furltoimage_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::liburltoimage::_Response_default_instance_;
-    new (ptr) ::liburltoimage::Response();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::liburltoimage::Response::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Response_urltoimage_2furltoimage_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_Response_urltoimage_2furltoimage_2eproto}, {
-      &scc_info_FileContent_urltoimage_2furltoimage_2eproto.base,}};
-
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_urltoimage_2furltoimage_2eproto[3];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_urltoimage_2furltoimage_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_urltoimage_2furltoimage_2eproto = nullptr;
-
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_urltoimage_2furltoimage_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_urltoimage_2furltoimage_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::liburltoimage::Request, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::liburltoimage::Request, url_),
-  PROTOBUF_FIELD_OFFSET(::liburltoimage::Request, size_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::Request, _impl_.url_),
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::Request, _impl_.size_),
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::Request, _impl_.type_),
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::Request, _impl_.quality_),
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::Request, _impl_.transparent_),
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::Request, _impl_.pdfoptions_),
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::Request, _impl_.capturebeyondviewport_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::PDFOptions, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::PDFOptions, _impl_.format_),
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::PDFOptions, _impl_.displayheaderfooter_),
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::PDFOptions, _impl_.footertemplate_),
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::PDFOptions, _impl_.headertemplate_),
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::PDFOptions, _impl_.height_),
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::PDFOptions, _impl_.width_),
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::PDFOptions, _impl_.landscape_),
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::PDFOptions, _impl_.omitbackground_),
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::PDFOptions, _impl_.pageranges_),
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::PDFOptions, _impl_.margin_),
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::PDFOptions, _impl_.printbackground_),
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::PDFOptions, _impl_.prefercsspagesize_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::PDFMargin, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::PDFMargin, _impl_.bottom_),
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::PDFMargin, _impl_.left_),
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::PDFMargin, _impl_.right_),
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::PDFMargin, _impl_.top_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::liburltoimage::FileContent, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::liburltoimage::FileContent, name_),
-  PROTOBUF_FIELD_OFFSET(::liburltoimage::FileContent, content_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::FileContent, _impl_.name_),
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::FileContent, _impl_.content_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::liburltoimage::Response, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::liburltoimage::Response, code_),
-  PROTOBUF_FIELD_OFFSET(::liburltoimage::Response, message_),
-  PROTOBUF_FIELD_OFFSET(::liburltoimage::Response, files_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::Response, _impl_.code_),
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::Response, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::liburltoimage::Response, _impl_.files_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::liburltoimage::Request)},
-  { 7, -1, sizeof(::liburltoimage::FileContent)},
-  { 14, -1, sizeof(::liburltoimage::Response)},
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::liburltoimage::Request)},
+  { 13, -1, -1, sizeof(::liburltoimage::PDFOptions)},
+  { 31, -1, -1, sizeof(::liburltoimage::PDFMargin)},
+  { 41, -1, -1, sizeof(::liburltoimage::FileContent)},
+  { 49, -1, -1, sizeof(::liburltoimage::Response)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::liburltoimage::_Request_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::liburltoimage::_FileContent_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::liburltoimage::_Response_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+  &::liburltoimage::_Request_default_instance_._instance,
+  &::liburltoimage::_PDFOptions_default_instance_._instance,
+  &::liburltoimage::_PDFMargin_default_instance_._instance,
+  &::liburltoimage::_FileContent_default_instance_._instance,
+  &::liburltoimage::_Response_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_urltoimage_2furltoimage_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\033urltoimage/urltoimage.proto\022\rliburltoi"
-  "mage\"$\n\007Request\022\013\n\003url\030\001 \001(\t\022\014\n\004size\030\002 \001"
-  "(\t\",\n\013FileContent\022\014\n\004name\030\001 \001(\t\022\017\n\007conte"
-  "nt\030\002 \001(\014\"T\n\010Response\022\014\n\004code\030\001 \001(\005\022\017\n\007me"
-  "ssage\030\002 \001(\t\022)\n\005files\030\003 \003(\0132\032.liburltoima"
-  "ge.FileContent2J\n\nUrltoimage\022<\n\007Convert\022"
-  "\026.liburltoimage.Request\032\027.liburltoimage."
-  "Response\"\000B\031Z\027mxiqi.com/liburltoimageb\006p"
-  "roto3"
+  "mage\"\246\001\n\007Request\022\013\n\003url\030\001 \001(\t\022\014\n\004size\030\002 "
+  "\001(\t\022\014\n\004type\030\003 \001(\t\022\017\n\007quality\030\004 \001(\005\022\023\n\013tr"
+  "ansparent\030\005 \001(\010\022-\n\npdfoptions\030\006 \001(\0132\031.li"
+  "burltoimage.PDFOptions\022\035\n\025captureBeyondV"
+  "iewport\030\007 \001(\010\"\245\002\n\nPDFOptions\022\016\n\006format\030\001"
+  " \001(\t\022\033\n\023displayHeaderFooter\030\002 \001(\010\022\026\n\016foo"
+  "terTemplate\030\003 \001(\t\022\026\n\016headerTemplate\030\004 \001("
+  "\t\022\016\n\006height\030\005 \001(\t\022\r\n\005width\030\006 \001(\t\022\021\n\tland"
+  "scape\030\007 \001(\010\022\026\n\016omitBackground\030\010 \001(\010\022\022\n\np"
+  "ageRanges\030\t \001(\t\022(\n\006margin\030\n \001(\0132\030.liburl"
+  "toimage.PDFMargin\022\027\n\017printBackground\030\013 \001"
+  "(\010\022\031\n\021preferCSSPageSize\030\014 \001(\010\"E\n\tPDFMarg"
+  "in\022\016\n\006bottom\030\001 \001(\t\022\014\n\004left\030\002 \001(\t\022\r\n\005righ"
+  "t\030\003 \001(\t\022\013\n\003top\030\004 \001(\t\",\n\013FileContent\022\014\n\004n"
+  "ame\030\001 \001(\t\022\017\n\007content\030\002 \001(\014\"T\n\010Response\022\014"
+  "\n\004code\030\001 \001(\005\022\017\n\007message\030\002 \001(\t\022)\n\005files\030\003"
+  " \003(\0132\032.liburltoimage.FileContent2J\n\nUrlt"
+  "oimage\022<\n\007Convert\022\026.liburltoimage.Reques"
+  "t\032\027.liburltoimage.Response\"\000B\031Z\027mxiqi.co"
+  "m/liburltoimageb\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_urltoimage_2furltoimage_2eproto_deps[1] = {
+static ::_pbi::once_flag descriptor_table_urltoimage_2furltoimage_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_urltoimage_2furltoimage_2eproto = {
+    false, false, 823, descriptor_table_protodef_urltoimage_2furltoimage_2eproto,
+    "urltoimage/urltoimage.proto",
+    &descriptor_table_urltoimage_2furltoimage_2eproto_once, nullptr, 0, 5,
+    schemas, file_default_instances, TableStruct_urltoimage_2furltoimage_2eproto::offsets,
+    file_level_metadata_urltoimage_2furltoimage_2eproto, file_level_enum_descriptors_urltoimage_2furltoimage_2eproto,
+    file_level_service_descriptors_urltoimage_2furltoimage_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_urltoimage_2furltoimage_2eproto_sccs[3] = {
-  &scc_info_FileContent_urltoimage_2furltoimage_2eproto.base,
-  &scc_info_Request_urltoimage_2furltoimage_2eproto.base,
-  &scc_info_Response_urltoimage_2furltoimage_2eproto.base,
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_urltoimage_2furltoimage_2eproto_once;
-static bool descriptor_table_urltoimage_2furltoimage_2eproto_initialized = false;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_urltoimage_2furltoimage_2eproto = {
-  &descriptor_table_urltoimage_2furltoimage_2eproto_initialized, descriptor_table_protodef_urltoimage_2furltoimage_2eproto, "urltoimage/urltoimage.proto", 325,
-  &descriptor_table_urltoimage_2furltoimage_2eproto_once, descriptor_table_urltoimage_2furltoimage_2eproto_sccs, descriptor_table_urltoimage_2furltoimage_2eproto_deps, 3, 0,
-  schemas, file_default_instances, TableStruct_urltoimage_2furltoimage_2eproto::offsets,
-  file_level_metadata_urltoimage_2furltoimage_2eproto, 3, file_level_enum_descriptors_urltoimage_2furltoimage_2eproto, file_level_service_descriptors_urltoimage_2furltoimage_2eproto,
-};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_urltoimage_2furltoimage_2eproto_getter() {
+  return &descriptor_table_urltoimage_2furltoimage_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_urltoimage_2furltoimage_2eproto = (  ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_urltoimage_2furltoimage_2eproto), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_urltoimage_2furltoimage_2eproto(&descriptor_table_urltoimage_2furltoimage_2eproto);
 namespace liburltoimage {
 
 // ===================================================================
 
-void Request::InitAsDefaultInstance() {
-}
 class Request::_Internal {
  public:
+  static const ::liburltoimage::PDFOptions& pdfoptions(const Request* msg);
 };
 
-Request::Request()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:liburltoimage.Request)
+const ::liburltoimage::PDFOptions&
+Request::_Internal::pdfoptions(const Request* msg) {
+  return *msg->_impl_.pdfoptions_;
+}
+Request::Request(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:liburltoimage.Request)
 }
 Request::Request(const Request& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  Request* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.url_){}
+    , decltype(_impl_.size_){}
+    , decltype(_impl_.type_){}
+    , decltype(_impl_.pdfoptions_){nullptr}
+    , decltype(_impl_.quality_){}
+    , decltype(_impl_.transparent_){}
+    , decltype(_impl_.capturebeyondviewport_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.url_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.url_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_url().empty()) {
-    url_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.url_);
+    _this->_impl_.url_.Set(from._internal_url(), 
+      _this->GetArenaForAllocation());
   }
-  size_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.size_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.size_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_size().empty()) {
-    size_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.size_);
+    _this->_impl_.size_.Set(from._internal_size(), 
+      _this->GetArenaForAllocation());
   }
+  _impl_.type_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.type_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_type().empty()) {
+    _this->_impl_.type_.Set(from._internal_type(), 
+      _this->GetArenaForAllocation());
+  }
+  if (from._internal_has_pdfoptions()) {
+    _this->_impl_.pdfoptions_ = new ::liburltoimage::PDFOptions(*from._impl_.pdfoptions_);
+  }
+  ::memcpy(&_impl_.quality_, &from._impl_.quality_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.capturebeyondviewport_) -
+    reinterpret_cast<char*>(&_impl_.quality_)) + sizeof(_impl_.capturebeyondviewport_));
   // @@protoc_insertion_point(copy_constructor:liburltoimage.Request)
 }
 
-void Request::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Request_urltoimage_2furltoimage_2eproto.base);
-  url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  size_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void Request::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.url_){}
+    , decltype(_impl_.size_){}
+    , decltype(_impl_.type_){}
+    , decltype(_impl_.pdfoptions_){nullptr}
+    , decltype(_impl_.quality_){0}
+    , decltype(_impl_.transparent_){false}
+    , decltype(_impl_.capturebeyondviewport_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.url_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.url_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.size_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.size_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.type_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.type_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 Request::~Request() {
   // @@protoc_insertion_point(destructor:liburltoimage.Request)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
 
-void Request::SharedDtor() {
-  url_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  size_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void Request::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.url_.Destroy();
+  _impl_.size_.Destroy();
+  _impl_.type_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.pdfoptions_;
 }
 
 void Request::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const Request& Request::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Request_urltoimage_2furltoimage_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void Request::Clear() {
 // @@protoc_insertion_point(message_clear_start:liburltoimage.Request)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  url_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  size_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  _internal_metadata_.Clear();
+  _impl_.url_.ClearToEmpty();
+  _impl_.size_.ClearToEmpty();
+  _impl_.type_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.pdfoptions_ != nullptr) {
+    delete _impl_.pdfoptions_;
+  }
+  _impl_.pdfoptions_ = nullptr;
+  ::memset(&_impl_.quality_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.capturebeyondviewport_) -
+      reinterpret_cast<char*>(&_impl_.quality_)) + sizeof(_impl_.capturebeyondviewport_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* Request::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* Request::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // string url = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(_internal_mutable_url(), ptr, ctx, "liburltoimage.Request.url");
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_url();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "liburltoimage.Request.url"));
+        } else
+          goto handle_unusual;
         continue;
       // string size = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(_internal_mutable_size(), ptr, ctx, "liburltoimage.Request.size");
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_size();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "liburltoimage.Request.size"));
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
-        CHK_(ptr != nullptr);
+      // string type = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          auto str = _internal_mutable_type();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "liburltoimage.Request.type"));
+        } else
+          goto handle_unusual;
         continue;
-      }
+      // int32 quality = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _impl_.quality_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // bool transparent = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _impl_.transparent_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // .liburltoimage.PDFOptions pdfoptions = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
+          ptr = ctx->ParseMessage(_internal_mutable_pdfoptions(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // bool captureBeyondViewport = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
+          _impl_.capturebeyondviewport_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* Request::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* Request::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:liburltoimage.Request)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string url = 1;
-  if (this->url().size() > 0) {
+  if (!this->_internal_url().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_url().data(), static_cast<int>(this->_internal_url().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -265,7 +470,7 @@ failure:
   }
 
   // string size = 2;
-  if (this->size().size() > 0) {
+  if (!this->_internal_size().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_size().data(), static_cast<int>(this->_internal_size().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -274,9 +479,44 @@ failure:
         2, this->_internal_size(), target);
   }
 
+  // string type = 3;
+  if (!this->_internal_type().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_type().data(), static_cast<int>(this->_internal_type().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "liburltoimage.Request.type");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_type(), target);
+  }
+
+  // int32 quality = 4;
+  if (this->_internal_quality() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_quality(), target);
+  }
+
+  // bool transparent = 5;
+  if (this->_internal_transparent() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_transparent(), target);
+  }
+
+  // .liburltoimage.PDFOptions pdfoptions = 6;
+  if (this->_internal_has_pdfoptions()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(6, _Internal::pdfoptions(this),
+        _Internal::pdfoptions(this).GetCachedSize(), target, stream);
+  }
+
+  // bool captureBeyondViewport = 7;
+  if (this->_internal_capturebeyondviewport() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(7, this->_internal_capturebeyondviewport(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:liburltoimage.Request)
   return target;
@@ -286,70 +526,94 @@ size_t Request::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:liburltoimage.Request)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string url = 1;
-  if (this->url().size() > 0) {
+  if (!this->_internal_url().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_url());
   }
 
   // string size = 2;
-  if (this->size().size() > 0) {
+  if (!this->_internal_size().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_size());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
+  // string type = 3;
+  if (!this->_internal_type().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_type());
   }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // .liburltoimage.PDFOptions pdfoptions = 6;
+  if (this->_internal_has_pdfoptions()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.pdfoptions_);
+  }
+
+  // int32 quality = 4;
+  if (this->_internal_quality() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_quality());
+  }
+
+  // bool transparent = 5;
+  if (this->_internal_transparent() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // bool captureBeyondViewport = 7;
+  if (this->_internal_capturebeyondviewport() != 0) {
+    total_size += 1 + 1;
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Request::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:liburltoimage.Request)
-  GOOGLE_DCHECK_NE(&from, this);
-  const Request* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Request>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:liburltoimage.Request)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:liburltoimage.Request)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Request::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Request::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Request::GetClassData() const { return &_class_data_; }
 
-void Request::MergeFrom(const Request& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:liburltoimage.Request)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void Request::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Request*>(&to_msg);
+  auto& from = static_cast<const Request&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:liburltoimage.Request)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.url().size() > 0) {
-
-    url_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.url_);
+  if (!from._internal_url().empty()) {
+    _this->_internal_set_url(from._internal_url());
   }
-  if (from.size().size() > 0) {
-
-    size_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.size_);
+  if (!from._internal_size().empty()) {
+    _this->_internal_set_size(from._internal_size());
   }
-}
-
-void Request::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:liburltoimage.Request)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  if (!from._internal_type().empty()) {
+    _this->_internal_set_type(from._internal_type());
+  }
+  if (from._internal_has_pdfoptions()) {
+    _this->_internal_mutable_pdfoptions()->::liburltoimage::PDFOptions::MergeFrom(
+        from._internal_pdfoptions());
+  }
+  if (from._internal_quality() != 0) {
+    _this->_internal_set_quality(from._internal_quality());
+  }
+  if (from._internal_transparent() != 0) {
+    _this->_internal_set_transparent(from._internal_transparent());
+  }
+  if (from._internal_capturebeyondviewport() != 0) {
+    _this->_internal_set_capturebeyondviewport(from._internal_capturebeyondviewport());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Request::CopyFrom(const Request& from) {
@@ -365,131 +629,1159 @@ bool Request::IsInitialized() const {
 
 void Request::InternalSwap(Request* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  url_.Swap(&other->url_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  size_.Swap(&other->size_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.url_, lhs_arena,
+      &other->_impl_.url_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.size_, lhs_arena,
+      &other->_impl_.size_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.type_, lhs_arena,
+      &other->_impl_.type_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(Request, _impl_.capturebeyondviewport_)
+      + sizeof(Request::_impl_.capturebeyondviewport_)
+      - PROTOBUF_FIELD_OFFSET(Request, _impl_.pdfoptions_)>(
+          reinterpret_cast<char*>(&_impl_.pdfoptions_),
+          reinterpret_cast<char*>(&other->_impl_.pdfoptions_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata Request::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_urltoimage_2furltoimage_2eproto_getter, &descriptor_table_urltoimage_2furltoimage_2eproto_once,
+      file_level_metadata_urltoimage_2furltoimage_2eproto[0]);
 }
-
 
 // ===================================================================
 
-void FileContent::InitAsDefaultInstance() {
+class PDFOptions::_Internal {
+ public:
+  static const ::liburltoimage::PDFMargin& margin(const PDFOptions* msg);
+};
+
+const ::liburltoimage::PDFMargin&
+PDFOptions::_Internal::margin(const PDFOptions* msg) {
+  return *msg->_impl_.margin_;
 }
+PDFOptions::PDFOptions(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:liburltoimage.PDFOptions)
+}
+PDFOptions::PDFOptions(const PDFOptions& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  PDFOptions* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.format_){}
+    , decltype(_impl_.footertemplate_){}
+    , decltype(_impl_.headertemplate_){}
+    , decltype(_impl_.height_){}
+    , decltype(_impl_.width_){}
+    , decltype(_impl_.pageranges_){}
+    , decltype(_impl_.margin_){nullptr}
+    , decltype(_impl_.displayheaderfooter_){}
+    , decltype(_impl_.landscape_){}
+    , decltype(_impl_.omitbackground_){}
+    , decltype(_impl_.printbackground_){}
+    , decltype(_impl_.prefercsspagesize_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.format_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.format_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_format().empty()) {
+    _this->_impl_.format_.Set(from._internal_format(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.footertemplate_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.footertemplate_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_footertemplate().empty()) {
+    _this->_impl_.footertemplate_.Set(from._internal_footertemplate(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.headertemplate_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.headertemplate_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_headertemplate().empty()) {
+    _this->_impl_.headertemplate_.Set(from._internal_headertemplate(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.height_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.height_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_height().empty()) {
+    _this->_impl_.height_.Set(from._internal_height(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.width_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.width_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_width().empty()) {
+    _this->_impl_.width_.Set(from._internal_width(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.pageranges_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.pageranges_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_pageranges().empty()) {
+    _this->_impl_.pageranges_.Set(from._internal_pageranges(), 
+      _this->GetArenaForAllocation());
+  }
+  if (from._internal_has_margin()) {
+    _this->_impl_.margin_ = new ::liburltoimage::PDFMargin(*from._impl_.margin_);
+  }
+  ::memcpy(&_impl_.displayheaderfooter_, &from._impl_.displayheaderfooter_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.prefercsspagesize_) -
+    reinterpret_cast<char*>(&_impl_.displayheaderfooter_)) + sizeof(_impl_.prefercsspagesize_));
+  // @@protoc_insertion_point(copy_constructor:liburltoimage.PDFOptions)
+}
+
+inline void PDFOptions::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.format_){}
+    , decltype(_impl_.footertemplate_){}
+    , decltype(_impl_.headertemplate_){}
+    , decltype(_impl_.height_){}
+    , decltype(_impl_.width_){}
+    , decltype(_impl_.pageranges_){}
+    , decltype(_impl_.margin_){nullptr}
+    , decltype(_impl_.displayheaderfooter_){false}
+    , decltype(_impl_.landscape_){false}
+    , decltype(_impl_.omitbackground_){false}
+    , decltype(_impl_.printbackground_){false}
+    , decltype(_impl_.prefercsspagesize_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.format_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.format_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.footertemplate_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.footertemplate_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.headertemplate_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.headertemplate_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.height_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.height_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.width_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.width_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.pageranges_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.pageranges_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+PDFOptions::~PDFOptions() {
+  // @@protoc_insertion_point(destructor:liburltoimage.PDFOptions)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void PDFOptions::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.format_.Destroy();
+  _impl_.footertemplate_.Destroy();
+  _impl_.headertemplate_.Destroy();
+  _impl_.height_.Destroy();
+  _impl_.width_.Destroy();
+  _impl_.pageranges_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.margin_;
+}
+
+void PDFOptions::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void PDFOptions::Clear() {
+// @@protoc_insertion_point(message_clear_start:liburltoimage.PDFOptions)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.format_.ClearToEmpty();
+  _impl_.footertemplate_.ClearToEmpty();
+  _impl_.headertemplate_.ClearToEmpty();
+  _impl_.height_.ClearToEmpty();
+  _impl_.width_.ClearToEmpty();
+  _impl_.pageranges_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.margin_ != nullptr) {
+    delete _impl_.margin_;
+  }
+  _impl_.margin_ = nullptr;
+  ::memset(&_impl_.displayheaderfooter_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.prefercsspagesize_) -
+      reinterpret_cast<char*>(&_impl_.displayheaderfooter_)) + sizeof(_impl_.prefercsspagesize_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* PDFOptions::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string format = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_format();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "liburltoimage.PDFOptions.format"));
+        } else
+          goto handle_unusual;
+        continue;
+      // bool displayHeaderFooter = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.displayheaderfooter_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // string footerTemplate = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          auto str = _internal_mutable_footertemplate();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "liburltoimage.PDFOptions.footerTemplate"));
+        } else
+          goto handle_unusual;
+        continue;
+      // string headerTemplate = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          auto str = _internal_mutable_headertemplate();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "liburltoimage.PDFOptions.headerTemplate"));
+        } else
+          goto handle_unusual;
+        continue;
+      // string height = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
+          auto str = _internal_mutable_height();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "liburltoimage.PDFOptions.height"));
+        } else
+          goto handle_unusual;
+        continue;
+      // string width = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
+          auto str = _internal_mutable_width();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "liburltoimage.PDFOptions.width"));
+        } else
+          goto handle_unusual;
+        continue;
+      // bool landscape = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
+          _impl_.landscape_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // bool omitBackground = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
+          _impl_.omitbackground_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // string pageRanges = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
+          auto str = _internal_mutable_pageranges();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "liburltoimage.PDFOptions.pageRanges"));
+        } else
+          goto handle_unusual;
+        continue;
+      // .liburltoimage.PDFMargin margin = 10;
+      case 10:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
+          ptr = ctx->ParseMessage(_internal_mutable_margin(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // bool printBackground = 11;
+      case 11:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 88)) {
+          _impl_.printbackground_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // bool preferCSSPageSize = 12;
+      case 12:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
+          _impl_.prefercsspagesize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* PDFOptions::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:liburltoimage.PDFOptions)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string format = 1;
+  if (!this->_internal_format().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_format().data(), static_cast<int>(this->_internal_format().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "liburltoimage.PDFOptions.format");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_format(), target);
+  }
+
+  // bool displayHeaderFooter = 2;
+  if (this->_internal_displayheaderfooter() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_displayheaderfooter(), target);
+  }
+
+  // string footerTemplate = 3;
+  if (!this->_internal_footertemplate().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_footertemplate().data(), static_cast<int>(this->_internal_footertemplate().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "liburltoimage.PDFOptions.footerTemplate");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_footertemplate(), target);
+  }
+
+  // string headerTemplate = 4;
+  if (!this->_internal_headertemplate().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_headertemplate().data(), static_cast<int>(this->_internal_headertemplate().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "liburltoimage.PDFOptions.headerTemplate");
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_headertemplate(), target);
+  }
+
+  // string height = 5;
+  if (!this->_internal_height().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_height().data(), static_cast<int>(this->_internal_height().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "liburltoimage.PDFOptions.height");
+    target = stream->WriteStringMaybeAliased(
+        5, this->_internal_height(), target);
+  }
+
+  // string width = 6;
+  if (!this->_internal_width().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_width().data(), static_cast<int>(this->_internal_width().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "liburltoimage.PDFOptions.width");
+    target = stream->WriteStringMaybeAliased(
+        6, this->_internal_width(), target);
+  }
+
+  // bool landscape = 7;
+  if (this->_internal_landscape() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(7, this->_internal_landscape(), target);
+  }
+
+  // bool omitBackground = 8;
+  if (this->_internal_omitbackground() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(8, this->_internal_omitbackground(), target);
+  }
+
+  // string pageRanges = 9;
+  if (!this->_internal_pageranges().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_pageranges().data(), static_cast<int>(this->_internal_pageranges().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "liburltoimage.PDFOptions.pageRanges");
+    target = stream->WriteStringMaybeAliased(
+        9, this->_internal_pageranges(), target);
+  }
+
+  // .liburltoimage.PDFMargin margin = 10;
+  if (this->_internal_has_margin()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(10, _Internal::margin(this),
+        _Internal::margin(this).GetCachedSize(), target, stream);
+  }
+
+  // bool printBackground = 11;
+  if (this->_internal_printbackground() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(11, this->_internal_printbackground(), target);
+  }
+
+  // bool preferCSSPageSize = 12;
+  if (this->_internal_prefercsspagesize() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(12, this->_internal_prefercsspagesize(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:liburltoimage.PDFOptions)
+  return target;
+}
+
+size_t PDFOptions::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:liburltoimage.PDFOptions)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string format = 1;
+  if (!this->_internal_format().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_format());
+  }
+
+  // string footerTemplate = 3;
+  if (!this->_internal_footertemplate().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_footertemplate());
+  }
+
+  // string headerTemplate = 4;
+  if (!this->_internal_headertemplate().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_headertemplate());
+  }
+
+  // string height = 5;
+  if (!this->_internal_height().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_height());
+  }
+
+  // string width = 6;
+  if (!this->_internal_width().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_width());
+  }
+
+  // string pageRanges = 9;
+  if (!this->_internal_pageranges().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_pageranges());
+  }
+
+  // .liburltoimage.PDFMargin margin = 10;
+  if (this->_internal_has_margin()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.margin_);
+  }
+
+  // bool displayHeaderFooter = 2;
+  if (this->_internal_displayheaderfooter() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // bool landscape = 7;
+  if (this->_internal_landscape() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // bool omitBackground = 8;
+  if (this->_internal_omitbackground() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // bool printBackground = 11;
+  if (this->_internal_printbackground() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // bool preferCSSPageSize = 12;
+  if (this->_internal_prefercsspagesize() != 0) {
+    total_size += 1 + 1;
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData PDFOptions::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    PDFOptions::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*PDFOptions::GetClassData() const { return &_class_data_; }
+
+
+void PDFOptions::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<PDFOptions*>(&to_msg);
+  auto& from = static_cast<const PDFOptions&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:liburltoimage.PDFOptions)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_format().empty()) {
+    _this->_internal_set_format(from._internal_format());
+  }
+  if (!from._internal_footertemplate().empty()) {
+    _this->_internal_set_footertemplate(from._internal_footertemplate());
+  }
+  if (!from._internal_headertemplate().empty()) {
+    _this->_internal_set_headertemplate(from._internal_headertemplate());
+  }
+  if (!from._internal_height().empty()) {
+    _this->_internal_set_height(from._internal_height());
+  }
+  if (!from._internal_width().empty()) {
+    _this->_internal_set_width(from._internal_width());
+  }
+  if (!from._internal_pageranges().empty()) {
+    _this->_internal_set_pageranges(from._internal_pageranges());
+  }
+  if (from._internal_has_margin()) {
+    _this->_internal_mutable_margin()->::liburltoimage::PDFMargin::MergeFrom(
+        from._internal_margin());
+  }
+  if (from._internal_displayheaderfooter() != 0) {
+    _this->_internal_set_displayheaderfooter(from._internal_displayheaderfooter());
+  }
+  if (from._internal_landscape() != 0) {
+    _this->_internal_set_landscape(from._internal_landscape());
+  }
+  if (from._internal_omitbackground() != 0) {
+    _this->_internal_set_omitbackground(from._internal_omitbackground());
+  }
+  if (from._internal_printbackground() != 0) {
+    _this->_internal_set_printbackground(from._internal_printbackground());
+  }
+  if (from._internal_prefercsspagesize() != 0) {
+    _this->_internal_set_prefercsspagesize(from._internal_prefercsspagesize());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void PDFOptions::CopyFrom(const PDFOptions& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:liburltoimage.PDFOptions)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool PDFOptions::IsInitialized() const {
+  return true;
+}
+
+void PDFOptions::InternalSwap(PDFOptions* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.format_, lhs_arena,
+      &other->_impl_.format_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.footertemplate_, lhs_arena,
+      &other->_impl_.footertemplate_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.headertemplate_, lhs_arena,
+      &other->_impl_.headertemplate_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.height_, lhs_arena,
+      &other->_impl_.height_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.width_, lhs_arena,
+      &other->_impl_.width_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.pageranges_, lhs_arena,
+      &other->_impl_.pageranges_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(PDFOptions, _impl_.prefercsspagesize_)
+      + sizeof(PDFOptions::_impl_.prefercsspagesize_)
+      - PROTOBUF_FIELD_OFFSET(PDFOptions, _impl_.margin_)>(
+          reinterpret_cast<char*>(&_impl_.margin_),
+          reinterpret_cast<char*>(&other->_impl_.margin_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata PDFOptions::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_urltoimage_2furltoimage_2eproto_getter, &descriptor_table_urltoimage_2furltoimage_2eproto_once,
+      file_level_metadata_urltoimage_2furltoimage_2eproto[1]);
+}
+
+// ===================================================================
+
+class PDFMargin::_Internal {
+ public:
+};
+
+PDFMargin::PDFMargin(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:liburltoimage.PDFMargin)
+}
+PDFMargin::PDFMargin(const PDFMargin& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  PDFMargin* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.bottom_){}
+    , decltype(_impl_.left_){}
+    , decltype(_impl_.right_){}
+    , decltype(_impl_.top_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.bottom_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.bottom_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_bottom().empty()) {
+    _this->_impl_.bottom_.Set(from._internal_bottom(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.left_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.left_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_left().empty()) {
+    _this->_impl_.left_.Set(from._internal_left(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.right_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.right_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_right().empty()) {
+    _this->_impl_.right_.Set(from._internal_right(), 
+      _this->GetArenaForAllocation());
+  }
+  _impl_.top_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.top_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_top().empty()) {
+    _this->_impl_.top_.Set(from._internal_top(), 
+      _this->GetArenaForAllocation());
+  }
+  // @@protoc_insertion_point(copy_constructor:liburltoimage.PDFMargin)
+}
+
+inline void PDFMargin::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.bottom_){}
+    , decltype(_impl_.left_){}
+    , decltype(_impl_.right_){}
+    , decltype(_impl_.top_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.bottom_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.bottom_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.left_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.left_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.right_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.right_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.top_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.top_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+PDFMargin::~PDFMargin() {
+  // @@protoc_insertion_point(destructor:liburltoimage.PDFMargin)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void PDFMargin::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.bottom_.Destroy();
+  _impl_.left_.Destroy();
+  _impl_.right_.Destroy();
+  _impl_.top_.Destroy();
+}
+
+void PDFMargin::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void PDFMargin::Clear() {
+// @@protoc_insertion_point(message_clear_start:liburltoimage.PDFMargin)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.bottom_.ClearToEmpty();
+  _impl_.left_.ClearToEmpty();
+  _impl_.right_.ClearToEmpty();
+  _impl_.top_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* PDFMargin::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string bottom = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_bottom();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "liburltoimage.PDFMargin.bottom"));
+        } else
+          goto handle_unusual;
+        continue;
+      // string left = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_left();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "liburltoimage.PDFMargin.left"));
+        } else
+          goto handle_unusual;
+        continue;
+      // string right = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          auto str = _internal_mutable_right();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "liburltoimage.PDFMargin.right"));
+        } else
+          goto handle_unusual;
+        continue;
+      // string top = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          auto str = _internal_mutable_top();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "liburltoimage.PDFMargin.top"));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* PDFMargin::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:liburltoimage.PDFMargin)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string bottom = 1;
+  if (!this->_internal_bottom().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_bottom().data(), static_cast<int>(this->_internal_bottom().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "liburltoimage.PDFMargin.bottom");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_bottom(), target);
+  }
+
+  // string left = 2;
+  if (!this->_internal_left().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_left().data(), static_cast<int>(this->_internal_left().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "liburltoimage.PDFMargin.left");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_left(), target);
+  }
+
+  // string right = 3;
+  if (!this->_internal_right().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_right().data(), static_cast<int>(this->_internal_right().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "liburltoimage.PDFMargin.right");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_right(), target);
+  }
+
+  // string top = 4;
+  if (!this->_internal_top().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_top().data(), static_cast<int>(this->_internal_top().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "liburltoimage.PDFMargin.top");
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_top(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:liburltoimage.PDFMargin)
+  return target;
+}
+
+size_t PDFMargin::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:liburltoimage.PDFMargin)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string bottom = 1;
+  if (!this->_internal_bottom().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_bottom());
+  }
+
+  // string left = 2;
+  if (!this->_internal_left().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_left());
+  }
+
+  // string right = 3;
+  if (!this->_internal_right().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_right());
+  }
+
+  // string top = 4;
+  if (!this->_internal_top().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_top());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData PDFMargin::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    PDFMargin::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*PDFMargin::GetClassData() const { return &_class_data_; }
+
+
+void PDFMargin::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<PDFMargin*>(&to_msg);
+  auto& from = static_cast<const PDFMargin&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:liburltoimage.PDFMargin)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_bottom().empty()) {
+    _this->_internal_set_bottom(from._internal_bottom());
+  }
+  if (!from._internal_left().empty()) {
+    _this->_internal_set_left(from._internal_left());
+  }
+  if (!from._internal_right().empty()) {
+    _this->_internal_set_right(from._internal_right());
+  }
+  if (!from._internal_top().empty()) {
+    _this->_internal_set_top(from._internal_top());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void PDFMargin::CopyFrom(const PDFMargin& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:liburltoimage.PDFMargin)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool PDFMargin::IsInitialized() const {
+  return true;
+}
+
+void PDFMargin::InternalSwap(PDFMargin* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.bottom_, lhs_arena,
+      &other->_impl_.bottom_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.left_, lhs_arena,
+      &other->_impl_.left_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.right_, lhs_arena,
+      &other->_impl_.right_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.top_, lhs_arena,
+      &other->_impl_.top_, rhs_arena
+  );
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata PDFMargin::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_urltoimage_2furltoimage_2eproto_getter, &descriptor_table_urltoimage_2furltoimage_2eproto_once,
+      file_level_metadata_urltoimage_2furltoimage_2eproto[2]);
+}
+
+// ===================================================================
+
 class FileContent::_Internal {
  public:
 };
 
-FileContent::FileContent()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:liburltoimage.FileContent)
+FileContent::FileContent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:liburltoimage.FileContent)
 }
 FileContent::FileContent(const FileContent& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  FileContent* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.name_){}
+    , decltype(_impl_.content_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_name().empty()) {
-    name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.name_);
+    _this->_impl_.name_.Set(from._internal_name(), 
+      _this->GetArenaForAllocation());
   }
-  content_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.content_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.content_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_content().empty()) {
-    content_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.content_);
+    _this->_impl_.content_.Set(from._internal_content(), 
+      _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:liburltoimage.FileContent)
 }
 
-void FileContent::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_FileContent_urltoimage_2furltoimage_2eproto.base);
-  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  content_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void FileContent::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.name_){}
+    , decltype(_impl_.content_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.content_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.content_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 FileContent::~FileContent() {
   // @@protoc_insertion_point(destructor:liburltoimage.FileContent)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
 
-void FileContent::SharedDtor() {
-  name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  content_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void FileContent::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.name_.Destroy();
+  _impl_.content_.Destroy();
 }
 
 void FileContent::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const FileContent& FileContent::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_FileContent_urltoimage_2furltoimage_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void FileContent::Clear() {
 // @@protoc_insertion_point(message_clear_start:liburltoimage.FileContent)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  content_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  _internal_metadata_.Clear();
+  _impl_.name_.ClearToEmpty();
+  _impl_.content_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* FileContent::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* FileContent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // string name = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(_internal_mutable_name(), ptr, ctx, "liburltoimage.FileContent.name");
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_name();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "liburltoimage.FileContent.name"));
+        } else
+          goto handle_unusual;
         continue;
       // bytes content = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(_internal_mutable_content(), ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_content();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* FileContent::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* FileContent::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:liburltoimage.FileContent)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string name = 1;
-  if (this->name().size() > 0) {
+  if (!this->_internal_name().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -499,14 +1791,14 @@ failure:
   }
 
   // bytes content = 2;
-  if (this->content().size() > 0) {
+  if (!this->_internal_content().empty()) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_content(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:liburltoimage.FileContent)
   return target;
@@ -516,70 +1808,49 @@ size_t FileContent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:liburltoimage.FileContent)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string name = 1;
-  if (this->name().size() > 0) {
+  if (!this->_internal_name().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_name());
   }
 
   // bytes content = 2;
-  if (this->content().size() > 0) {
+  if (!this->_internal_content().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_content());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void FileContent::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:liburltoimage.FileContent)
-  GOOGLE_DCHECK_NE(&from, this);
-  const FileContent* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<FileContent>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:liburltoimage.FileContent)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:liburltoimage.FileContent)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FileContent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    FileContent::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FileContent::GetClassData() const { return &_class_data_; }
 
-void FileContent::MergeFrom(const FileContent& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:liburltoimage.FileContent)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void FileContent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<FileContent*>(&to_msg);
+  auto& from = static_cast<const FileContent&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:liburltoimage.FileContent)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.name().size() > 0) {
-
-    name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.name_);
+  if (!from._internal_name().empty()) {
+    _this->_internal_set_name(from._internal_name());
   }
-  if (from.content().size() > 0) {
-
-    content_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.content_);
+  if (!from._internal_content().empty()) {
+    _this->_internal_set_content(from._internal_content());
   }
-}
-
-void FileContent::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:liburltoimage.FileContent)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void FileContent::CopyFrom(const FileContent& from) {
@@ -595,104 +1866,133 @@ bool FileContent::IsInitialized() const {
 
 void FileContent::InternalSwap(FileContent* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  content_.Swap(&other->content_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.name_, lhs_arena,
+      &other->_impl_.name_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.content_, lhs_arena,
+      &other->_impl_.content_, rhs_arena
+  );
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata FileContent::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_urltoimage_2furltoimage_2eproto_getter, &descriptor_table_urltoimage_2furltoimage_2eproto_once,
+      file_level_metadata_urltoimage_2furltoimage_2eproto[3]);
 }
-
 
 // ===================================================================
 
-void Response::InitAsDefaultInstance() {
-}
 class Response::_Internal {
  public:
 };
 
-Response::Response()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:liburltoimage.Response)
+Response::Response(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:liburltoimage.Response)
 }
 Response::Response(const Response& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr),
-      files_(from.files_) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  Response* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.files_){from._impl_.files_}
+    , decltype(_impl_.message_){}
+    , decltype(_impl_.code_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.message_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.message_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_message().empty()) {
-    message_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.message_);
+    _this->_impl_.message_.Set(from._internal_message(), 
+      _this->GetArenaForAllocation());
   }
-  code_ = from.code_;
+  _this->_impl_.code_ = from._impl_.code_;
   // @@protoc_insertion_point(copy_constructor:liburltoimage.Response)
 }
 
-void Response::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Response_urltoimage_2furltoimage_2eproto.base);
-  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  code_ = 0;
+inline void Response::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.files_){arena}
+    , decltype(_impl_.message_){}
+    , decltype(_impl_.code_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.message_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.message_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 Response::~Response() {
   // @@protoc_insertion_point(destructor:liburltoimage.Response)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
 
-void Response::SharedDtor() {
-  message_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void Response::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.files_.~RepeatedPtrField();
+  _impl_.message_.Destroy();
 }
 
 void Response::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const Response& Response::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Response_urltoimage_2furltoimage_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void Response::Clear() {
 // @@protoc_insertion_point(message_clear_start:liburltoimage.Response)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  files_.Clear();
-  message_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  code_ = 0;
-  _internal_metadata_.Clear();
+  _impl_.files_.Clear();
+  _impl_.message_.ClearToEmpty();
+  _impl_.code_ = 0;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* Response::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* Response::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // int32 code = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          code_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.code_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // string message = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(_internal_mutable_message(), ptr, ctx, "liburltoimage.Response.message");
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_message();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "liburltoimage.Response.message"));
+        } else
+          goto handle_unusual;
         continue;
       // repeated .liburltoimage.FileContent files = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -700,42 +2000,46 @@ const char* Response::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::i
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* Response::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* Response::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:liburltoimage.Response)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // int32 code = 1;
-  if (this->code() != 0) {
-    stream->EnsureSpace(&target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_code(), target);
+  if (this->_internal_code() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_code(), target);
   }
 
   // string message = 2;
-  if (this->message().size() > 0) {
+  if (!this->_internal_message().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -745,16 +2049,16 @@ failure:
   }
 
   // repeated .liburltoimage.FileContent files = 3;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_files_size()); i < n; i++) {
-    stream->EnsureSpace(&target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_files_size()); i < n; i++) {
+    const auto& repfield = this->_internal_files(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(3, this->_internal_files(i), target, stream);
+        InternalWriteMessage(3, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:liburltoimage.Response)
   return target;
@@ -764,77 +2068,55 @@ size_t Response::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:liburltoimage.Response)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .liburltoimage.FileContent files = 3;
   total_size += 1UL * this->_internal_files_size();
-  for (const auto& msg : this->files_) {
+  for (const auto& msg : this->_impl_.files_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // string message = 2;
-  if (this->message().size() > 0) {
+  if (!this->_internal_message().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_message());
   }
 
   // int32 code = 1;
-  if (this->code() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_code());
+  if (this->_internal_code() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_code());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Response::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:liburltoimage.Response)
-  GOOGLE_DCHECK_NE(&from, this);
-  const Response* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Response>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:liburltoimage.Response)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:liburltoimage.Response)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Response::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Response::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Response::GetClassData() const { return &_class_data_; }
 
-void Response::MergeFrom(const Response& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:liburltoimage.Response)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void Response::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Response*>(&to_msg);
+  auto& from = static_cast<const Response&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:liburltoimage.Response)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  files_.MergeFrom(from.files_);
-  if (from.message().size() > 0) {
-
-    message_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.message_);
+  _this->_impl_.files_.MergeFrom(from._impl_.files_);
+  if (!from._internal_message().empty()) {
+    _this->_internal_set_message(from._internal_message());
   }
-  if (from.code() != 0) {
-    _internal_set_code(from._internal_code());
+  if (from._internal_code() != 0) {
+    _this->_internal_set_code(from._internal_code());
   }
-}
-
-void Response::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:liburltoimage.Response)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Response::CopyFrom(const Response& from) {
@@ -850,29 +2132,45 @@ bool Response::IsInitialized() const {
 
 void Response::InternalSwap(Response* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  files_.InternalSwap(&other->files_);
-  message_.Swap(&other->message_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  swap(code_, other->code_);
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.files_.InternalSwap(&other->_impl_.files_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.message_, lhs_arena,
+      &other->_impl_.message_, rhs_arena
+  );
+  swap(_impl_.code_, other->_impl_.code_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata Response::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_urltoimage_2furltoimage_2eproto_getter, &descriptor_table_urltoimage_2furltoimage_2eproto_once,
+      file_level_metadata_urltoimage_2furltoimage_2eproto[4]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace liburltoimage
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::liburltoimage::Request* Arena::CreateMaybeMessage< ::liburltoimage::Request >(Arena* arena) {
-  return Arena::CreateInternal< ::liburltoimage::Request >(arena);
+template<> PROTOBUF_NOINLINE ::liburltoimage::Request*
+Arena::CreateMaybeMessage< ::liburltoimage::Request >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::liburltoimage::Request >(arena);
 }
-template<> PROTOBUF_NOINLINE ::liburltoimage::FileContent* Arena::CreateMaybeMessage< ::liburltoimage::FileContent >(Arena* arena) {
-  return Arena::CreateInternal< ::liburltoimage::FileContent >(arena);
+template<> PROTOBUF_NOINLINE ::liburltoimage::PDFOptions*
+Arena::CreateMaybeMessage< ::liburltoimage::PDFOptions >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::liburltoimage::PDFOptions >(arena);
 }
-template<> PROTOBUF_NOINLINE ::liburltoimage::Response* Arena::CreateMaybeMessage< ::liburltoimage::Response >(Arena* arena) {
-  return Arena::CreateInternal< ::liburltoimage::Response >(arena);
+template<> PROTOBUF_NOINLINE ::liburltoimage::PDFMargin*
+Arena::CreateMaybeMessage< ::liburltoimage::PDFMargin >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::liburltoimage::PDFMargin >(arena);
+}
+template<> PROTOBUF_NOINLINE ::liburltoimage::FileContent*
+Arena::CreateMaybeMessage< ::liburltoimage::FileContent >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::liburltoimage::FileContent >(arena);
+}
+template<> PROTOBUF_NOINLINE ::liburltoimage::Response*
+Arena::CreateMaybeMessage< ::liburltoimage::Response >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::liburltoimage::Response >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

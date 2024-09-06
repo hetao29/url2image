@@ -16,11 +16,11 @@ class Response extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>int32 code = 1;</code>
      */
-    private $code = 0;
+    protected $code = 0;
     /**
      * Generated from protobuf field <code>string message = 2;</code>
      */
-    private $message = '';
+    protected $message = '';
     /**
      * Generated from protobuf field <code>repeated .liburltoimage.FileContent files = 3;</code>
      */
@@ -34,7 +34,7 @@ class Response extends \Google\Protobuf\Internal\Message
      *
      *     @type int $code
      *     @type string $message
-     *     @type \Liburltoimage\FileContent[]|\Google\Protobuf\Internal\RepeatedField $files
+     *     @type array<\Liburltoimage\FileContent>|\Google\Protobuf\Internal\RepeatedField $files
      * }
      */
     public function __construct($data = NULL) {
@@ -97,7 +97,7 @@ class Response extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .liburltoimage.FileContent files = 3;</code>
-     * @param \Liburltoimage\FileContent[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Liburltoimage\FileContent>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setFiles($var)

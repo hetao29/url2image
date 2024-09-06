@@ -16,19 +16,19 @@ class PDFMargin extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string bottom = 1;</code>
      */
-    private $bottom = '';
+    protected $bottom = '';
     /**
      * Generated from protobuf field <code>string left = 2;</code>
      */
-    private $left = '';
+    protected $left = '';
     /**
      * Generated from protobuf field <code>string right = 3;</code>
      */
-    private $right = '';
+    protected $right = '';
     /**
      * Generated from protobuf field <code>string top = 4;</code>
      */
-    private $top = '';
+    protected $top = '';
 
     /**
      * Constructor.

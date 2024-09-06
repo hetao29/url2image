@@ -20,35 +20,35 @@ class Request extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string url = 1;</code>
      */
-    private $url = '';
+    protected $url = '';
     /**
      *要转换成的类型,pdf,png/jpg
      *
      * Generated from protobuf field <code>string size = 2;</code>
      */
-    private $size = '';
+    protected $size = '';
     /**
      * Generated from protobuf field <code>string type = 3;</code>
      */
-    private $type = '';
+    protected $type = '';
     /**
      * Generated from protobuf field <code>int32 quality = 4;</code>
      */
-    private $quality = 0;
+    protected $quality = 0;
     /**
      *是否透明
      *
      * Generated from protobuf field <code>bool transparent = 5;</code>
      */
-    private $transparent = false;
+    protected $transparent = false;
     /**
      * Generated from protobuf field <code>.liburltoimage.PDFOptions pdfoptions = 6;</code>
      */
-    private $pdfoptions = null;
+    protected $pdfoptions = null;
     /**
      * Generated from protobuf field <code>bool captureBeyondViewport = 7;</code>
      */
-    private $captureBeyondViewport = false;
+    protected $captureBeyondViewport = false;
 
     /**
      * Constructor.
@@ -197,11 +197,21 @@ class Request extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.liburltoimage.PDFOptions pdfoptions = 6;</code>
-     * @return \Liburltoimage\PDFOptions
+     * @return \Liburltoimage\PDFOptions|null
      */
     public function getPdfoptions()
     {
         return $this->pdfoptions;
+    }
+
+    public function hasPdfoptions()
+    {
+        return isset($this->pdfoptions);
+    }
+
+    public function clearPdfoptions()
+    {
+        unset($this->pdfoptions);
     }
 
     /**

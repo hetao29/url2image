@@ -6,28 +6,32 @@
 
 #include "urltoimage/urltoimage.pb.h"
 
-#include <grpc++/impl/codegen/async_stream.h>
-#include <grpc++/impl/codegen/async_unary_call.h>
-#include <grpc++/impl/codegen/method_handler_impl.h>
-#include <grpc++/impl/codegen/proto_utils.h>
-#include <grpc++/impl/codegen/rpc_method.h>
-#include <grpc++/impl/codegen/service_type.h>
-#include <grpc++/impl/codegen/status.h>
-#include <grpc++/impl/codegen/stub_options.h>
-#include <grpc++/impl/codegen/sync_stream.h>
-
-namespace grpc {
-class CompletionQueue;
-class Channel;
-class RpcService;
-class ServerCompletionQueue;
-class ServerContext;
-}  // namespace grpc
+#include <functional>
+#include <grpcpp/generic/async_generic_service.h>
+#include <grpcpp/support/async_stream.h>
+#include <grpcpp/support/async_unary_call.h>
+#include <grpcpp/support/client_callback.h>
+#include <grpcpp/client_context.h>
+#include <grpcpp/completion_queue.h>
+#include <grpcpp/support/message_allocator.h>
+#include <grpcpp/support/method_handler.h>
+#include <grpcpp/impl/codegen/proto_utils.h>
+#include <grpcpp/impl/rpc_method.h>
+#include <grpcpp/support/server_callback.h>
+#include <grpcpp/impl/codegen/server_callback_handlers.h>
+#include <grpcpp/server_context.h>
+#include <grpcpp/impl/service_type.h>
+#include <grpcpp/impl/codegen/status.h>
+#include <grpcpp/support/stub_options.h>
+#include <grpcpp/support/sync_stream.h>
 
 namespace liburltoimage {
 
 class Urltoimage final {
  public:
+  static constexpr char const* service_full_name() {
+    return "liburltoimage.Urltoimage";
+  }
   class StubInterface {
    public:
     virtual ~StubInterface() {}
@@ -36,21 +40,52 @@ class Urltoimage final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::liburltoimage::Response>> AsyncConvert(::grpc::ClientContext* context, const ::liburltoimage::Request& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::liburltoimage::Response>>(AsyncConvertRaw(context, request, cq));
     }
-  private:
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::liburltoimage::Response>> PrepareAsyncConvert(::grpc::ClientContext* context, const ::liburltoimage::Request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::liburltoimage::Response>>(PrepareAsyncConvertRaw(context, request, cq));
+    }
+    class async_interface {
+     public:
+      virtual ~async_interface() {}
+      // Sends a greeting
+      virtual void Convert(::grpc::ClientContext* context, const ::liburltoimage::Request* request, ::liburltoimage::Response* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void Convert(::grpc::ClientContext* context, const ::liburltoimage::Request* request, ::liburltoimage::Response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+    };
+    typedef class async_interface experimental_async_interface;
+    virtual class async_interface* async() { return nullptr; }
+    class async_interface* experimental_async() { return async(); }
+   private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::liburltoimage::Response>* AsyncConvertRaw(::grpc::ClientContext* context, const ::liburltoimage::Request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::liburltoimage::Response>* PrepareAsyncConvertRaw(::grpc::ClientContext* context, const ::liburltoimage::Request& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
-    Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel);
+    Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
     ::grpc::Status Convert(::grpc::ClientContext* context, const ::liburltoimage::Request& request, ::liburltoimage::Response* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::liburltoimage::Response>> AsyncConvert(::grpc::ClientContext* context, const ::liburltoimage::Request& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::liburltoimage::Response>>(AsyncConvertRaw(context, request, cq));
     }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::liburltoimage::Response>> PrepareAsyncConvert(::grpc::ClientContext* context, const ::liburltoimage::Request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::liburltoimage::Response>>(PrepareAsyncConvertRaw(context, request, cq));
+    }
+    class async final :
+      public StubInterface::async_interface {
+     public:
+      void Convert(::grpc::ClientContext* context, const ::liburltoimage::Request* request, ::liburltoimage::Response* response, std::function<void(::grpc::Status)>) override;
+      void Convert(::grpc::ClientContext* context, const ::liburltoimage::Request* request, ::liburltoimage::Response* response, ::grpc::ClientUnaryReactor* reactor) override;
+     private:
+      friend class Stub;
+      explicit async(Stub* stub): stub_(stub) { }
+      Stub* stub() { return stub_; }
+      Stub* stub_;
+    };
+    class async* async() override { return &async_stub_; }
 
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
+    class async async_stub_{this};
     ::grpc::ClientAsyncResponseReader< ::liburltoimage::Response>* AsyncConvertRaw(::grpc::ClientContext* context, const ::liburltoimage::Request& request, ::grpc::CompletionQueue* cq) override;
-    const ::grpc::RpcMethod rpcmethod_Convert_;
+    ::grpc::ClientAsyncResponseReader< ::liburltoimage::Response>* PrepareAsyncConvertRaw(::grpc::ClientContext* context, const ::liburltoimage::Request& request, ::grpc::CompletionQueue* cq) override;
+    const ::grpc::internal::RpcMethod rpcmethod_Convert_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -64,7 +99,7 @@ class Urltoimage final {
   template <class BaseClass>
   class WithAsyncMethod_Convert : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_Convert() {
       ::grpc::Service::MarkMethodAsync(0);
@@ -73,7 +108,7 @@ class Urltoimage final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Convert(::grpc::ServerContext* context, const ::liburltoimage::Request* request, ::liburltoimage::Response* response) final override {
+    ::grpc::Status Convert(::grpc::ServerContext* /*context*/, const ::liburltoimage::Request* /*request*/, ::liburltoimage::Response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -83,9 +118,38 @@ class Urltoimage final {
   };
   typedef WithAsyncMethod_Convert<Service > AsyncService;
   template <class BaseClass>
+  class WithCallbackMethod_Convert : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_Convert() {
+      ::grpc::Service::MarkMethodCallback(0,
+          new ::grpc::internal::CallbackUnaryHandler< ::liburltoimage::Request, ::liburltoimage::Response>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::liburltoimage::Request* request, ::liburltoimage::Response* response) { return this->Convert(context, request, response); }));}
+    void SetMessageAllocatorFor_Convert(
+        ::grpc::MessageAllocator< ::liburltoimage::Request, ::liburltoimage::Response>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::liburltoimage::Request, ::liburltoimage::Response>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_Convert() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Convert(::grpc::ServerContext* /*context*/, const ::liburltoimage::Request* /*request*/, ::liburltoimage::Response* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* Convert(
+      ::grpc::CallbackServerContext* /*context*/, const ::liburltoimage::Request* /*request*/, ::liburltoimage::Response* /*response*/)  { return nullptr; }
+  };
+  typedef WithCallbackMethod_Convert<Service > CallbackService;
+  typedef CallbackService ExperimentalCallbackService;
+  template <class BaseClass>
   class WithGenericMethod_Convert : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_Convert() {
       ::grpc::Service::MarkMethodGeneric(0);
@@ -94,25 +158,74 @@ class Urltoimage final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Convert(::grpc::ServerContext* context, const ::liburltoimage::Request* request, ::liburltoimage::Response* response) final override {
+    ::grpc::Status Convert(::grpc::ServerContext* /*context*/, const ::liburltoimage::Request* /*request*/, ::liburltoimage::Response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
   };
   template <class BaseClass>
+  class WithRawMethod_Convert : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_Convert() {
+      ::grpc::Service::MarkMethodRaw(0);
+    }
+    ~WithRawMethod_Convert() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Convert(::grpc::ServerContext* /*context*/, const ::liburltoimage::Request* /*request*/, ::liburltoimage::Response* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestConvert(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_Convert : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_Convert() {
+      ::grpc::Service::MarkMethodRawCallback(0,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Convert(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_Convert() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status Convert(::grpc::ServerContext* /*context*/, const ::liburltoimage::Request* /*request*/, ::liburltoimage::Response* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* Convert(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
   class WithStreamedUnaryMethod_Convert : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_Convert() {
       ::grpc::Service::MarkMethodStreamed(0,
-        new ::grpc::StreamedUnaryHandler< ::liburltoimage::Request, ::liburltoimage::Response>(std::bind(&WithStreamedUnaryMethod_Convert<BaseClass>::StreamedConvert, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::liburltoimage::Request, ::liburltoimage::Response>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::liburltoimage::Request, ::liburltoimage::Response>* streamer) {
+                       return this->StreamedConvert(context,
+                         streamer);
+                  }));
     }
     ~WithStreamedUnaryMethod_Convert() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Convert(::grpc::ServerContext* context, const ::liburltoimage::Request* request, ::liburltoimage::Response* response) final override {
+    ::grpc::Status Convert(::grpc::ServerContext* /*context*/, const ::liburltoimage::Request* /*request*/, ::liburltoimage::Response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }

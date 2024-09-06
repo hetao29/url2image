@@ -1,9 +1,11 @@
 <?php
 // GENERATED CODE -- DO NOT EDIT!
 
-namespace Liburltoimage {
+namespace Liburltoimage;
 
-  class UrltoimageClient extends \Grpc\BaseStub {
+/**
+ */
+class UrltoimageClient extends \Grpc\BaseStub {
 
     /**
      * @param string $hostname hostname
@@ -11,7 +13,7 @@ namespace Liburltoimage {
      * @param \Grpc\Channel $channel (optional) re-use channel object
      */
     public function __construct($hostname, $opts, $channel = null) {
-      parent::__construct($hostname, $opts, $channel);
+        parent::__construct($hostname, $opts, $channel);
     }
 
     /**
@@ -19,15 +21,14 @@ namespace Liburltoimage {
      * @param \Liburltoimage\Request $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function Convert(\Liburltoimage\Request $argument,
       $metadata = [], $options = []) {
-      return $this->_simpleRequest('/liburltoimage.Urltoimage/Convert',
-      $argument,
-      ['\Liburltoimage\Response', 'decode'],
-      $metadata, $options);
+        return $this->_simpleRequest('/liburltoimage.Urltoimage/Convert',
+        $argument,
+        ['\Liburltoimage\Response', 'decode'],
+        $metadata, $options);
     }
-
-  }
 
 }

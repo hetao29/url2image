@@ -20,57 +20,57 @@ class PDFOptions extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string format = 1;</code>
      */
-    private $format = '';
+    protected $format = '';
     /**
      * Generated from protobuf field <code>bool displayHeaderFooter = 2;</code>
      */
-    private $displayHeaderFooter = false;
+    protected $displayHeaderFooter = false;
     /**
      * Generated from protobuf field <code>string footerTemplate = 3;</code>
      */
-    private $footerTemplate = '';
+    protected $footerTemplate = '';
     /**
      * Generated from protobuf field <code>string headerTemplate = 4;</code>
      */
-    private $headerTemplate = '';
+    protected $headerTemplate = '';
     /**
      * Generated from protobuf field <code>string height = 5;</code>
      */
-    private $height = '';
+    protected $height = '';
     /**
      * Generated from protobuf field <code>string width = 6;</code>
      */
-    private $width = '';
+    protected $width = '';
     /**
      *是否横向（默认是竖）
      *
      * Generated from protobuf field <code>bool landscape = 7;</code>
      */
-    private $landscape = false;
+    protected $landscape = false;
     /**
      *是否透明
      *
      * Generated from protobuf field <code>bool omitBackground = 8;</code>
      */
-    private $omitBackground = false;
+    protected $omitBackground = false;
     /**
      * Generated from protobuf field <code>string pageRanges = 9;</code>
      */
-    private $pageRanges = '';
+    protected $pageRanges = '';
     /**
      *边距
      *
      * Generated from protobuf field <code>.liburltoimage.PDFMargin margin = 10;</code>
      */
-    private $margin = null;
+    protected $margin = null;
     /**
      * Generated from protobuf field <code>bool printBackground = 11;</code>
      */
-    private $printBackground = false;
+    protected $printBackground = false;
     /**
      * Generated from protobuf field <code>bool preferCSSPageSize = 12;</code>
      */
-    private $preferCSSPageSize = false;
+    protected $preferCSSPageSize = false;
 
     /**
      * Constructor.
@@ -315,11 +315,21 @@ class PDFOptions extends \Google\Protobuf\Internal\Message
      *边距
      *
      * Generated from protobuf field <code>.liburltoimage.PDFMargin margin = 10;</code>
-     * @return \Liburltoimage\PDFMargin
+     * @return \Liburltoimage\PDFMargin|null
      */
     public function getMargin()
     {
         return $this->margin;
+    }
+
+    public function hasMargin()
+    {
+        return isset($this->margin);
+    }
+
+    public function clearMargin()
+    {
+        unset($this->margin);
     }
 
     /**

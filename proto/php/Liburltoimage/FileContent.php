@@ -18,13 +18,13 @@ class FileContent extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string name = 1;</code>
      */
-    private $name = '';
+    protected $name = '';
     /**
      *二进制的文件内容
      *
      * Generated from protobuf field <code>bytes content = 2;</code>
      */
-    private $content = '';
+    protected $content = '';
 
     /**
      * Constructor.
