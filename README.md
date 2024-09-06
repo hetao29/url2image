@@ -4,9 +4,14 @@
 
 具体协议参考 https://github.com/hetao29/url2image/blob/main/proto_src/urltoimage/urltoimage.proto
 
+## 特性说明
+1. 支持grpc的所有语言，包括java,c,c++,golang,node,php,python...
+2. 图片支持生成透明图，类型（png/jpg)
+3. 支持生成pdf，pdf的选项设置（透明，大小，边距，宽高等），可以参考proto的定义文件
+
 ## 目录说明
 
-1. proto_src目录，proto 的定义文件目录
+1. proto_src目录，proto 的定义文件目录，可以用来生成自己的各类开发语言
 2. client/client_xxx 目录，各语言的客户端示例代码(golang,js,php,java)
 3. proto目录，是自动生成的 proto 的目录，不需要手动修改
 4. server/client目录，golang 版本的 server 和 client
@@ -14,26 +19,13 @@
 ## 部署(docker-compose.yml)
 
 ```yaml
-version: "3.7"
 services:
   core:
     image: hetao29/url2image:latest
     ports:
         - "10020:80"
     deploy:
-      replicas: 2
-      update_config:
-        parallelism: 1
-        delay: 10s
-        order: start-first
-        failure_action: rollback
-      rollback_config:
-        parallelism: 1
-        delay: 10s
-        order: start-first
-        failure_action: rollback
-      restart_policy:
-        condition: on-failure
+      replicas: 1
 
 ```
 
